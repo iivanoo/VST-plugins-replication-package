@@ -285,12 +285,21 @@ def creating_dataframes():
     df_cc_final.drop_duplicates(subset='repository_url',keep='first')
     df_cc_final.to_csv('repo_final_mined_data//curated_csv//cc_final.csv')
 
-    df_final_intermediary = df_issues_final.merge(df_prs_final.merge(df_cc_final, on=['repository_url'], how='inner'), on=['repository_url'], how='inner')
-    df_final_intermediary['url'] = df_final_intermediary['repository_url']
 
-    df_final = df_intermediate.merge(df_final_intermediary.merge(df_in_depth_selected_details, on=['url'], how='left').fillna(0), on=['url'], how='left').fillna(0)
-    df_final.drop_duplicates(subset='url',keep='first')
-    df_final.filter(['html_url','name','full_name','description','topics','created_at','updated_at','pushed_at',
+    # Final dataframe with all fields mined + duplicated
+    df_final_intermediary_raw = df_issues.merge(df_prs.merge(df_cc, on=['repository_url'], how='inner'), on=['repository_url'], how='inner')
+    df_final_intermediary_raw['url'] = df_final_intermediary_raw['repository_url']
+
+    df_final_raw = df_intermediate.merge(df_final_intermediary_raw.merge(df_in_depth_details, on=['url'], how='left').fillna(0), on=['url'], how='left').fillna(0)
+    df_final_raw.to_csv('repo_final_mined_data//raw_uncurated_csv//final_data_uncurated.csv')
+
+    # Final dataframe with only fields of interest mined + without duplicates
+    df_final_intermediary_curated = df_issues_final.merge(df_prs_final.merge(df_cc_final, on=['repository_url'], how='inner'), on=['repository_url'], how='inner')
+    df_final_intermediary_curated['url'] = df_final_intermediary_curated['repository_url']
+
+    df_final_curated = df_intermediate.merge(df_final_intermediary_curated.merge(df_in_depth_selected_details, on=['url'], how='left').fillna(0), on=['url'], how='left').fillna(0)
+    df_final_curated.drop_duplicates(subset='url',keep='first')
+    df_final_curated.filter(['html_url','name','full_name','description','topics','created_at','updated_at','pushed_at',
         'size','language','stargazers_count','subscribers_count','has_issues','has_downloads','has_discussions',
         'forks_count','default_branch','private','open_issues_only','closed_issues_only','open_pull_requests','closed_pull_requests','commits_number','contributors_number']).to_csv('repo_final_mined_data//curated_csv//final_data_curated.csv')
 

@@ -245,24 +245,24 @@ def creating_dataframes():
 
     # Create a dataframe only with issues (opened+closed) number, exported as csv
     # total_count_x = number of issues opened, total_count_y = number of issues closed
-    df_issues = df_issues_open.merge(df_issues_close, on=['repository_url'], how='inner')
-    df_issues['open_issues_only']=df_issues['total_count_x']
-    df_issues['closed_issues_only']=df_issues['total_count_y']
+    df_issues = df_issues_open.merge(df_issues_close, on=['repository_url'], how='inner', suffixes= ('_issues_opened','_issues_closed'))
+    df_issues['open_issues_only']=df_issues['total_count_issues_opened']
+    df_issues['closed_issues_only']=df_issues['total_count_issues_closed']
     df_issues.to_csv('repo_final_mined_data//raw_uncurated_csv//issues_count_raw.csv')
 
     # Create a dataframe only with prs (opened+closed) number, exported as csv
     # total_count_x = number of prs opened, total_count_y = number of prs closed
-    df_prs = df_prs_open.merge(df_prs_close, on=['repository_url'], how='inner')
-    df_prs['open_pull_requests']=df_prs['total_count_x']
-    df_prs['closed_pull_requests']=df_prs['total_count_y']
+    df_prs = df_prs_open.merge(df_prs_close, on=['repository_url'], how='inner', suffixes =('_prs_opened','_prs_closed'))
+    df_prs['open_pull_requests']=df_prs['total_count_prs_opened']
+    df_prs['closed_pull_requests']=df_prs['total_count_prs_closed']
     df_prs.to_csv('repo_final_mined_data//raw_uncurated_csv//prs_count_raw.csv')
  
     # Create a dataframe only with contributors and commits number, exported as csv
     # number_x = number of commits, number_y = number of contributors
-    df_cc = df_commits.merge(df_contributors, on=['repository'], how='inner')
+    df_cc = df_commits.merge(df_contributors, on=['repository'], how='inner', suffixes = ('_commits','_contributors'))
     df_cc['repository_url'] = 'https://api.github.com/repos/'+df_cc['repository']
-    df_cc['commits_number']=df_cc['number_x']
-    df_cc['contributors_number']=df_cc['number_y']
+    df_cc['commits_number']=df_cc['number_commits']
+    df_cc['contributors_number']=df_cc['number_contributors']
     df_cc.to_csv('repo_final_mined_data//raw_uncurated_csv//contributors_and_commits_count_raw.csv')
 
     
@@ -287,10 +287,10 @@ def creating_dataframes():
 
 
     # Final dataframe with all fields mined + duplicated
-    df_final_intermediary_raw = df_issues.merge(df_prs.merge(df_cc, on=['repository_url'], how='inner'), on=['repository_url'], how='inner')
+    df_final_intermediary_raw = df_issues.merge(df_prs.merge(df_cc, on=['repository_url'], how='inner',suffixes=('_PRS','_CC')), on=['repository_url'], how='inner', suffixes = ('_ISSUES','_PRS_CC'))
     df_final_intermediary_raw['url'] = df_final_intermediary_raw['repository_url']
 
-    df_final_raw = df_intermediate.merge(df_final_intermediary_raw.merge(df_in_depth_details, on=['url'], how='left').fillna(0), on=['url'], how='left').fillna(0)
+    df_final_raw = df_intermediate.merge(df_final_intermediary_raw.merge(df_in_depth_details, on=['url'], how='left', suffixes=('_INT_RAW','_DPTH_DET')).fillna(0), on=['url'], how='left', suffixes = ('_INTERMEDIATE', '_INT_RAW_DPTH_DET')).fillna(0)
     df_final_raw.to_csv('repo_final_mined_data//raw_uncurated_csv//final_data_uncurated.csv')
 
     # Final dataframe with only fields of interest mined + without duplicates
@@ -298,7 +298,7 @@ def creating_dataframes():
     df_final_intermediary_curated['url'] = df_final_intermediary_curated['repository_url']
 
     df_final_curated = df_intermediate.merge(df_final_intermediary_curated.merge(df_in_depth_selected_details, on=['url'], how='left').fillna(0), on=['url'], how='left').fillna(0)
-    df_final_curated.drop_duplicates(subset='url',keep='first')
+    df_final_curated.drop_duplicates(subset='id',keep='first',inplace=True)
     df_final_curated.filter(['html_url','name','full_name','description','topics','created_at','updated_at','pushed_at',
         'size','language','stargazers_count','subscribers_count','has_issues','has_downloads','has_discussions',
         'forks_count','default_branch','private','open_issues_only','closed_issues_only','open_pull_requests','closed_pull_requests','commits_number','contributors_number']).to_csv('repo_final_mined_data//curated_csv//final_data_curated.csv')

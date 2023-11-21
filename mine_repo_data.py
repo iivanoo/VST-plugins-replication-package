@@ -301,7 +301,7 @@ def creating_dataframes():
     df_final_curated.drop_duplicates(subset='id',keep='first',inplace=True)
     df_final_curated.filter(['html_url','name','full_name','description','topics','created_at','updated_at','pushed_at',
         'size','language','stargazers_count','subscribers_count','has_issues','has_downloads','has_discussions',
-        'forks_count','default_branch','private','open_issues_only','closed_issues_only','open_pull_requests','closed_pull_requests','commits_number','contributors_number']).to_csv('repo_final_mined_data//curated_csv//final_data_curated.csv')
+        'forks_count','default_branch','private','open_issues_only','closed_issues_only','open_pull_requests','closed_pull_requests','commits_number','contributors_number','license.key','owner.type']).to_csv('repo_final_mined_data//curated_csv//final_data_curated.csv')
 
     # Create a final dataframe for 
 

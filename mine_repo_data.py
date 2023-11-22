@@ -20,7 +20,45 @@ def mine_git_repos_demographic_basic_data():
             with open('repo_demographic_mined_data//data-topic_'+topic+'_pageNumber_'+str(x)+'.json', 'w') as f:
                 json.dump(data, f)
 
-
+def mine_git_repos_programming_languages():
+    # Loading categorized csv file as dataframe
+    #df = pd.read_csv('repo_final_mined_data//curated_csv//final_data_curated - final_data_curated_categorized.csv')
+    #repos_name = list(df['full_name'])
+    #for repo in repos_name:
+    #    time.sleep(10)
+    #    repo_name = repo.replace('/','-')
+    #    urls = requests.get('https://api.github.com/repos/'+repo+'/languages', headers={'Authorization': 'Bearer '+TOKEN})
+    #    data = urls.json()
+    #    with open('repo_final_mined_data//languages//'+repo_name+'_languages_list.json', 'w') as f:
+    #        json.dump(data, f)
+    #    pprint('programming languages list gathered for repo: ' + repo)
+    # For repo programming languages
+    merged_contents_programming_languages = []
+    for f in glob.glob('repo_final_mined_data/languages/*.json'):
+        with open(f, 'r', encoding='utf-8') as file_in:
+            for line in file_in:
+                a_dict = json.loads(line)
+                merged_contents_programming_languages.append(a_dict)
+    with open('repo_final_mined_data//mined_repo_programming_languages.json', 'w', encoding='utf-8') as file_out:
+        json.dump(merged_contents_programming_languages, file_out)
+    
+    # only for the programming language
+    df_programming_languages = pd.DataFrame()
+    programming_languages = []
+    with open("repo_final_mined_data//mined_repo_programming_languages.json") as jsonFile:
+        data = json.load(jsonFile)
+        for x in data:
+            programming_languages.append(x.keys())
+    df_programming_languages['language'] = programming_languages
+    df_only_programming_languages = df_programming_languages.explode('language')
+    df_only_programming_languages.to_csv('repo_final_mined_data//curated_csv//only_programming_languages_used_across_categorized_repositories.csv')
+    
+    # the programming language + their number of bytes of code written in that language
+    with open('repo_final_mined_data//mined_repo_in_depth_details.json') as file_in:
+        data = json.load(file_in)
+    df_programming_languages_size = pd.json_normalize(data)
+    df_programming_languages_size.to_csv('repo_final_mined_data//raw_csv//programming_languages_bytes_size_across_categorized_repositories.csv')
+    
 def merge_json_files():
     # For repo basic info
     merged_contents_basic_info = []
@@ -316,4 +354,5 @@ def creating_dataframes():
 
 #mine_git_repos_demographic_basic_data()
 #merge_json_files()
-creating_dataframes()
+#creating_dataframes()
+mine_git_repos_programming_languages()

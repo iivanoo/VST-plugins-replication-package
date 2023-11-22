@@ -2,7 +2,7 @@
 Replication package of my thesis titled "Characterising the Development Practices of Virtual Studio Technology (VST) Plugins"<br><br>
 
 **Navigation:**<br>
-- **"repo_demographic_mined_data" folder** contains the JSONs with all the querrys results, basically everything that the GET Requests from the script mined.
+- **"repo_demographic_mined_data" folder** contains the JSONs with all the queries results, basically everything that the GET Requests from the script mined.
 - **"repo_final_mined_data" folder** contains all JSONs from "repo_demographic_mined_data" but merged, the names of the files are suggestive and self-explanatory for what was merged inside that file.
   - **"raw_csv" folder** contains all JSONs from "repo_demographic_mined_data" but merged and converted to csv format, the names of the files are suggestive and self-explanatory for what was merged inside that file 
   - **"raw_uncurated_csv" folder** contains as csvs the following JSONs:
@@ -14,4 +14,6 @@ Replication package of my thesis titled "Characterising the Development Practice
     - *final_data_curated.csv = final dataframe*
     - *in_depth_selected_details.csv - from mined_repo_in_depth_details.json*
     - *issues_final.csv from issues_count_raw.csv*
-    - *prs_final.csv from prs_count_raw.csv* <br><br>
+    - *prs_final.csv from prs_count_raw.csv*
+- **"Quantitative analysis" folder** contains the Python script that does the quantitative analysis plots which outputs them under **"Figures" folder** and it is using the csvs files from **"CSVs Used" folder**. 
+<br><br>

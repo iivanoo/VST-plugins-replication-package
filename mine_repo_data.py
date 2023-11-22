@@ -22,16 +22,16 @@ def mine_git_repos_demographic_basic_data():
 
 def mine_git_repos_programming_languages():
     # Loading categorized csv file as dataframe
-    #df = pd.read_csv('repo_final_mined_data//curated_csv//final_data_curated - final_data_curated_categorized.csv')
-    #repos_name = list(df['full_name'])
-    #for repo in repos_name:
-    #    time.sleep(10)
-    #    repo_name = repo.replace('/','-')
-    #    urls = requests.get('https://api.github.com/repos/'+repo+'/languages', headers={'Authorization': 'Bearer '+TOKEN})
-    #    data = urls.json()
-    #    with open('repo_final_mined_data//languages//'+repo_name+'_languages_list.json', 'w') as f:
-    #        json.dump(data, f)
-    #    pprint('programming languages list gathered for repo: ' + repo)
+    df = pd.read_csv('repo_final_mined_data//curated_csv//final_data_curated - final_data_curated_categorized.csv')
+    repos_name = list(df['full_name'])
+    for repo in repos_name:
+        time.sleep(10)
+        repo_name = repo.replace('/','-')
+        urls = requests.get('https://api.github.com/repos/'+repo+'/languages', headers={'Authorization': 'Bearer '+TOKEN})
+        data = urls.json()
+        with open('repo_final_mined_data//languages//'+repo_name+'_languages_list.json', 'w') as f:
+            json.dump(data, f)
+        pprint('programming languages list gathered for repo: ' + repo)
     # For repo programming languages
     merged_contents_programming_languages = []
     for f in glob.glob('repo_final_mined_data/languages/*.json'):
@@ -58,7 +58,35 @@ def mine_git_repos_programming_languages():
         data = json.load(file_in)
     df_programming_languages_size = pd.json_normalize(data)
     df_programming_languages_size.to_csv('repo_final_mined_data//raw_csv//programming_languages_bytes_size_across_categorized_repositories.csv')
-    
+
+def mine_git_repos_contributors():
+    # Loading categorized csv file as dataframe
+    df = pd.read_csv('repo_final_mined_data//curated_csv//final_data_curated - final_data_curated_categorized.csv')
+    repos_name = list(df['full_name'])
+    for repo in repos_name:
+        time.sleep(10)
+        repo_name = repo.replace('/','-')
+        urls = requests.get('https://api.github.com/repos/'+repo+'/contributors', headers={'Authorization': 'Bearer '+TOKEN})
+        data = urls.json()
+        with open('repo_final_mined_data//contributors//'+repo_name+'_contributors_list.json', 'w') as f:
+            json.dump(data, f)
+        pprint('contributors list gathered for repo: ' + repo)
+    merged_contents_contributors = []
+    for f in glob.glob('repo_final_mined_data/contributors/*.json'):
+        with open(f, 'r', encoding='utf-8') as file_in:
+            for line in file_in:
+                a_dict = json.loads(line)
+                merged_contents_contributors.append(a_dict)
+    with open('repo_final_mined_data//mined_repo_contributors.json', 'w', encoding='utf-8') as file_out:
+        json.dump(merged_contents_contributors, file_out)
+   
+    # the programming language + their number of bytes of code written in that language
+    with open('repo_final_mined_data//mined_repo_contributors.json') as file_in:
+        data = json.load(file_in)
+    df_contributors = pd.json_normalize(data)
+    df_contributors_final = pd.json_normalize(df_contributors[0])
+    df_contributors_final.to_csv('repo_final_mined_data//curated_csv//contributors_across_categorized_repositories.csv')
+
 def merge_json_files():
     # For repo basic info
     merged_contents_basic_info = []
@@ -138,7 +166,7 @@ def merge_json_files():
 
 
 
-def creating_dataframes():
+def mine_more_data_and_create_dataframes():
     with open('repo_final_mined_data//mined_repo_data_basic.json') as file_in:
         data = json.load(file_in)
     # Load initial JSON file as a dataframe and normalize it
@@ -156,70 +184,70 @@ def creating_dataframes():
     #########################################
          # START MINING MORE_DATA/REPO #
     #########################################    
-    #for repo in repos_full_name_list:
-    #    time.sleep(10)
-    #    repo_name = repo.replace('/','-')
+    for repo in repos_full_name_list:
+        time.sleep(10)
+        repo_name = repo.replace('/','-')
 
         # More details than mine_git_repos_demographic_basic_data() per repo - needed for extracting the watchers count (subscribers_count) of a repo 
-    #    try:
-    #        details_url = f'https://api.github.com/repos/{repo}'
-    #        pprint('Details gathered for repo: ' + repo)
-    #        urls_details = requests.get(details_url, headers={'Authorization': 'Bearer '+TOKEN})
-    #        data = urls_details.json()
-    #        with open('repo_demographic_mined_data//more_data//in_depth_details//details_for_repo_'+repo_name+'.json', 'w') as f:
-    #            json.dump(data, f)
-    #    except ValueError:  # includes simplejson.decoder.JSONDecodeError
-    #        print('Decoding JSON has failed')
+        try:
+            details_url = f'https://api.github.com/repos/{repo}'
+            pprint('Details gathered for repo: ' + repo)
+            urls_details = requests.get(details_url, headers={'Authorization': 'Bearer '+TOKEN})
+            data = urls_details.json()
+            with open('repo_demographic_mined_data//more_data//in_depth_details//details_for_repo_'+repo_name+'.json', 'w') as f:
+                json.dump(data, f)
+        except ValueError:  # includes simplejson.decoder.JSONDecodeError
+            print('Decoding JSON has failed')
         # Commits total number per repo, code from: https://gist.github.com/0penBrain/7be59a48aba778c955d992aa69e524c5
-        #commit_url = f'https://api.github.com/repos/{repo}/commits?per_page=1'
-        #pprint('commits count gathered for repo: ' + repo)
-        #urls_commits = requests.get(commit_url, headers={'Authorization': 'Bearer '+TOKEN})
-        #data = urls_commits.json()[0]
-        #data['repository'] = repo
-        #data['number'] = re.search('\d+$', urls_commits.links['last']['url']).group()
-        #with open('repo_demographic_mined_data//more_data//commit_count//commits_number_for_repo_'+repo_name+'.json', 'w') as f:
-        #    json.dump(data, f)
+        commit_url = f'https://api.github.com/repos/{repo}/commits?per_page=1'
+        pprint('commits count gathered for repo: ' + repo)
+        urls_commits = requests.get(commit_url, headers={'Authorization': 'Bearer '+TOKEN})
+        data = urls_commits.json()[0]
+        data['repository'] = repo
+        data['number'] = re.search('\d+$', urls_commits.links['last']['url']).group()
+        with open('repo_demographic_mined_data//more_data//commit_count//commits_number_for_repo_'+repo_name+'.json', 'w') as f:
+            json.dump(data, f)
         
         # Contributors total number per repo, code adapted from above
-        #try:
-        #    contributor_url = f'https://api.github.com/repos/{repo}/contributors?per_page=1'
-        #    pprint('contributors count gathered for repo: ' + repo)
-        #    urls_contributors = requests.get(contributor_url, headers={'Authorization': 'Bearer '+TOKEN})
-        #    data = urls_contributors.json()[0]
-        #    data['repository'] = repo
-        #    data['number'] = re.search('\d+$', urls_contributors.links['last']['url']).group()
-        #    with open('repo_demographic_mined_data//more_data//contributor_count//commits_number_for_repo_'+repo_name+'.json', 'w') as f:
-        #        json.dump(data, f)
-        #except KeyError:
-        #    data={'repository': repo, 'number': 0}
-        #    with open('repo_demographic_mined_data//more_data//contributor_count//commits_number_for_repo_'+repo_name+'.json', 'w') as f:
-        #        json.dump(data, f)
-        #    pass
-        #except IndexError:
-        #    data={'repository': repo, 'number': 0}
-        #    with open('repo_demographic_mined_data//more_data//contributor_count//commits_number_for_repo_'+repo_name+'.json', 'w') as f:
-        #        json.dump(data, f)
-        #    pass        
+        try:
+            contributor_url = f'https://api.github.com/repos/{repo}/contributors?per_page=1'
+            pprint('contributors count gathered for repo: ' + repo)
+            urls_contributors = requests.get(contributor_url, headers={'Authorization': 'Bearer '+TOKEN})
+            data = urls_contributors.json()[0]
+            data['repository'] = repo
+            data['number'] = re.search('\d+$', urls_contributors.links['last']['url']).group()
+            with open('repo_demographic_mined_data//more_data//contributor_count//commits_number_for_repo_'+repo_name+'.json', 'w') as f:
+                json.dump(data, f)
+        except KeyError:
+            data={'repository': repo, 'number': 0}
+            with open('repo_demographic_mined_data//more_data//contributor_count//commits_number_for_repo_'+repo_name+'.json', 'w') as f:
+                json.dump(data, f)
+            pass
+        except IndexError:
+            data={'repository': repo, 'number': 0}
+            with open('repo_demographic_mined_data//more_data//contributor_count//commits_number_for_repo_'+repo_name+'.json', 'w') as f:
+                json.dump(data, f)
+            pass        
 
         # Opened and closed issues count per repo
-        #for issue_status in ('open','closed'):
-        #    time.sleep(10)
-        #    issue_url = f'https://api.github.com/search/issues?q=repo:{repo}%20is:issue%20is:{issue_status}&per_page=1'
-        #    pprint(issue_status + ' issues count gathered for repo: ' + repo)
-        #    urls_issues = requests.get(issue_url, headers={'Authorization': 'Bearer '+TOKEN})
-        #    data = urls_issues.json()
-        #    with open('repo_demographic_mined_data//more_data//issue_count//issue_type_'+issue_status+'_repo_'+repo_name+'.json', 'w') as f:
-        #        json.dump(data, f)
+        for issue_status in ('open','closed'):
+            time.sleep(10)
+            issue_url = f'https://api.github.com/search/issues?q=repo:{repo}%20is:issue%20is:{issue_status}&per_page=1'
+            pprint(issue_status + ' issues count gathered for repo: ' + repo)
+            urls_issues = requests.get(issue_url, headers={'Authorization': 'Bearer '+TOKEN})
+            data = urls_issues.json()
+            with open('repo_demographic_mined_data//more_data//issue_count//issue_type_'+issue_status+'_repo_'+repo_name+'.json', 'w') as f:
+                json.dump(data, f)
     
         # Opened and closed pull requests count per repo
-        #for pr_status in ('open','closed'): 
-        #    time.sleep(10)
-        #    prs_url = f'https://api.github.com/search/issues?q=repo:{repo}%20is:pr%20is:{pr_status}&per_page=1'
-        #    pprint(pr_status + ' pull requests count gathered for repo: ' + repo)
-        #    urls_prs = requests.get(prs_url, headers={'Authorization': 'Bearer '+TOKEN})
-        #    data = urls_prs.json()
-        #    with open('repo_demographic_mined_data//more_data//pr_count//pr_type_'+pr_status+'_repo_'+repo_name+'.json', 'w') as f:
-        #        json.dump(data, f)
+        for pr_status in ('open','closed'): 
+            time.sleep(10)
+            prs_url = f'https://api.github.com/search/issues?q=repo:{repo}%20is:pr%20is:{pr_status}&per_page=1'
+            pprint(pr_status + ' pull requests count gathered for repo: ' + repo)
+            urls_prs = requests.get(prs_url, headers={'Authorization': 'Bearer '+TOKEN})
+            data = urls_prs.json()
+            with open('repo_demographic_mined_data//more_data//pr_count//pr_type_'+pr_status+'_repo_'+repo_name+'.json', 'w') as f:
+                json.dump(data, f)
     
 
     #########################################
@@ -341,18 +369,10 @@ def creating_dataframes():
         'size','language','stargazers_count','subscribers_count','has_issues','has_downloads','has_discussions',
         'forks_count','default_branch','private','open_issues_only','closed_issues_only','open_pull_requests','closed_pull_requests','commits_number','contributors_number','license.key','owner.type']).to_csv('repo_final_mined_data//curated_csv//final_data_curated.csv')
 
-    # Create a final dataframe for 
-
-    # Export as csv file only the field of interests
-    #df_final = df_intermediate.filter(['html_url','name','full_name','description','topics','created_at','updated_at','pushed_at',
-    #        'size','language','stargazers_count','watchers_count','has_issues','has_downloads','has_discussions',
-    #        'forks_count','open_issues_count'])#.sort_values(by=['created_at'], ascending=False) #For sorting...
-    #df_final.drop_duplicates(subset='html_url',keep='first')
-    #df_final.to_csv('repo_final_mined_data//mined_repo_data_curated.csv')
-    
 
 
 #mine_git_repos_demographic_basic_data()
 #merge_json_files()
-#creating_dataframes()
-mine_git_repos_programming_languages()
+#mine_more_data_and_create_dataframes()
+#mine_git_repos_programming_languages()
+#mine_git_repos_contributors()

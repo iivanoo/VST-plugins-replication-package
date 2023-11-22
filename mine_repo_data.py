@@ -53,11 +53,6 @@ def mine_git_repos_programming_languages():
     df_only_programming_languages = df_programming_languages.explode('language')
     df_only_programming_languages.to_csv('repo_final_mined_data//curated_csv//only_programming_languages_used_across_categorized_repositories.csv')
     
-    # the programming language + their number of bytes of code written in that language
-    with open('repo_final_mined_data//mined_repo_in_depth_details.json') as file_in:
-        data = json.load(file_in)
-    df_programming_languages_size = pd.json_normalize(data)
-    df_programming_languages_size.to_csv('repo_final_mined_data//raw_csv//programming_languages_bytes_size_across_categorized_repositories.csv')
 
 def mine_git_repos_contributors():
     # Loading categorized csv file as dataframe
@@ -71,21 +66,18 @@ def mine_git_repos_contributors():
         with open('repo_final_mined_data//contributors//'+repo_name+'_contributors_list.json', 'w') as f:
             json.dump(data, f)
         pprint('contributors list gathered for repo: ' + repo)
+
     merged_contents_contributors = []
     for f in glob.glob('repo_final_mined_data/contributors/*.json'):
-        with open(f, 'r', encoding='utf-8') as file_in:
-            for line in file_in:
-                a_dict = json.loads(line)
-                merged_contents_contributors.append(a_dict)
-    with open('repo_final_mined_data//mined_repo_contributors.json', 'w', encoding='utf-8') as file_out:
+        with open(f, "r") as file_in:
+            merged_contents_contributors += json.load(file_in)
+    with open("repo_final_mined_data//mined_repo_contributors.json", "w") as file_out:
         json.dump(merged_contents_contributors, file_out)
-   
-    # the programming language + their number of bytes of code written in that language
+    
     with open('repo_final_mined_data//mined_repo_contributors.json') as file_in:
-        data = json.load(file_in)
+         data = json.load(file_in)
     df_contributors = pd.json_normalize(data)
-    df_contributors_final = pd.json_normalize(df_contributors[0])
-    df_contributors_final.to_csv('repo_final_mined_data//curated_csv//contributors_across_categorized_repositories.csv')
+    df_contributors.to_csv('repo_final_mined_data//curated_csv//contributors_details.csv')
 
 def merge_json_files():
     # For repo basic info

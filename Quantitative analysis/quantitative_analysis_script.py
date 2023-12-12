@@ -144,7 +144,6 @@ plt.clf()
 plt.figure(figsize=(100,10))
 
 programming = sns.histplot(df_contributors['login'], discrete=True, color='blue', kde=True)
-
 programming.set(title='Contributors across the repositories')
 programming.set(xlabel='Contributors GitHub Username')
 programming.set(ylabel='Repositories count')
@@ -152,6 +151,10 @@ programming.set(ylabel='Repositories count')
 plt.xticks(rotation=90, ha='right')
 plt.savefig("Figures//mega_contributor.png")
 plt.clf()
+
+df_contributors_list = df_contributors.filter(['login','url'])
+df_contributors_list.drop_duplicates(subset='login', keep='first', inplace=True)
+df_contributors_list.to_csv("Output CSVs//contributors_across_repositories.csv")
 
 ##################################
 ########## STARS COUNT ###########
@@ -395,8 +398,8 @@ age = sns.violinplot(data=df_age, y=df_age['days_age'], palette='Blues_d')
 sns.boxplot(y=df_age['days_age'], data=df_age, palette='Blues', width=0.3,boxprops={'zorder': 2})
 
 age.set(title='Age expressed in days across repositories')
-age.set(xlabel='Days')
-age.set(ylabel='Repositories')
+age.set(xlabel='Repositories')
+age.set(ylabel='Age expressed in days')
 
 plt.savefig("Figures//age.png")
 plt.clf()

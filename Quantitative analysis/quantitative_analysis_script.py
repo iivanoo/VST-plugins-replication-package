@@ -16,6 +16,7 @@ import ast
 df_repos = pd.read_csv('CSVs Used//final_data_curated - final_data_curated_categorized.csv')
 df_programming_languages = pd.read_csv('CSVs Used//only_programming_languages_used_across_categorized_repositories.csv')
 df_contributors = pd.read_csv('CSVs Used//contributors_details.csv')
+df_users = pd.read_csv('CSVs Used//users_details.csv')
 
 
 ##################################
@@ -103,6 +104,7 @@ created_at.set(xticks=df_created_at_count['created_at'].dt.year)
 
 plt.savefig("Figures//created_at.png")
 plt.clf()
+
 
 
 ###################################
@@ -426,3 +428,24 @@ plt.savefig("Figures//freshness.png")
 plt.clf()
 
 
+#################################
+########## USERS AGE ############
+#################################
+plt.figure(figsize=(15,10))
+
+# Count repos per year
+df_users_age = pd.DataFrame(data = df_users[['login','created_at']])
+df_users_age['created_at'] = pd.to_datetime(df_users_age['created_at'].str.slice(0,10),format='%Y-%m-%d')
+df_users_age['today_at'] = pd.to_datetime(date.today().strftime('%Y-%m-%d'))
+
+df_users_age['age_in_days'] =  (df_freshness['today_at'] - df_freshness['pushed_at']).dt.days
+
+user_age = df_users_age.plot(x='login',y='age_in_days',kind='bar',legend=False,figsize=(100,10))
+
+user_age.set(title='Contributors GitHub profiles age')
+user_age.set(xlabel='Contributor GitHub username')
+user_age.set(ylabel='Age expressed in days')
+
+
+plt.savefig("Figures//users_age.png")
+plt.clf()

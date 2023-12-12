@@ -79,6 +79,34 @@ def mine_git_repos_contributors():
     df_contributors = pd.json_normalize(data)
     df_contributors.to_csv('repo_final_mined_data//curated_csv//contributors_details.csv')
 
+def mine_users_age():
+    # Loading categorized csv file as dataframe
+    df = pd.read_csv('Quantitative analysis//Output CSVs//contributors_across_repositories.csv')
+    users_name = list(df['login'])
+    for user in users_name:
+        time.sleep(10)
+        urls = requests.get('https://api.github.com/users/'+ user, headers={'Authorization': 'Bearer '+TOKEN})
+        data = urls.json()
+        with open('repo_final_mined_data//users//'+user+'_details.json', 'w') as f:
+            json.dump(data, f)
+        pprint('details gathered for user: ' + user)
+
+    merged_contents_users = []
+    for f in glob.glob('repo_final_mined_data/users/*.json'):
+        with open(f, 'r', encoding='utf-8') as file_in:
+            for line in file_in:
+                a_dict = json.loads(line)
+                merged_contents_users.append(a_dict)
+    with open('repo_final_mined_data//mined_repo_users_details.json', 'w', encoding='utf-8') as file_out:
+        json.dump(merged_contents_users, file_out)
+    
+    with open('repo_final_mined_data//mined_repo_users_details.json') as file_in:
+         data = json.load(file_in)
+    users_details = pd.json_normalize(data)
+    users_details.to_csv('repo_final_mined_data//curated_csv//users_details.csv')
+
+    
+   
 def merge_json_files():
     # For repo basic info
     merged_contents_basic_info = []
@@ -367,4 +395,5 @@ def mine_more_data_and_create_dataframes():
 #merge_json_files()
 #mine_more_data_and_create_dataframes()
 #mine_git_repos_programming_languages()
+#mine_users_age()
 #mine_git_repos_contributors()

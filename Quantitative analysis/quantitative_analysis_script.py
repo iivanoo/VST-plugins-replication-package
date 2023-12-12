@@ -449,3 +449,5 @@ user_age.set(ylabel='Age expressed in days')
 
 plt.savefig("Figures//users_age.png")
 plt.clf()
+
+df_users_age.to_csv("Output CSVs/users_details.csv")

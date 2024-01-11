@@ -74,7 +74,7 @@ df_topic_JUCE['created_at'] =  pd.to_datetime(df_topic_JUCE['created_at'].str.sl
 year = df_topic_JUCE['created_at'].dt.year
 df_topic_JUCE['count_per_year'] = df_topic_JUCE.groupby(year)['created_at'].transform('size')
 
-evolution_JUCE_tag = sns.histplot(df_topic_JUCE['created_at'].dt.year, discrete=True, color='blue', kde=True)
+evolution_JUCE_tag = sns.histplot(df_topic_JUCE['created_at'].dt.year, discrete=True, color='blue', kde=False)
 
 evolution_JUCE_tag.set(title='Evolution of JUCE framework GitHub tags: (\'juce\',\'juce-framework\',\'juce-plugins\',\'juce-plugin\') over the years')
 evolution_JUCE_tag.set(xlabel='Year')
@@ -95,7 +95,7 @@ df_created_at_count['created_at'] = pd.to_datetime(df_created_at_count['created_
 year = df_created_at_count['created_at'].dt.year
 df_created_at_count['count_per_year'] = df_created_at_count.groupby(year)['created_at'].transform('size')
 
-created_at = sns.histplot(df_created_at_count['created_at'].dt.year, discrete=True, color='blue', kde=True)
+created_at = sns.histplot(df_created_at_count['created_at'].dt.year, discrete=True, color='blue', kde=False)
 
 created_at.set(title='Created repositories per year')
 created_at.set(xlabel='Year')
@@ -129,7 +129,7 @@ plt.clf()
 ###########################################
 plt.figure(figsize=(15,10))
 
-programming = sns.histplot(df_programming_languages['language'], discrete=True, color='blue', kde=True)
+programming = sns.histplot(df_programming_languages['language'], discrete=True, color='blue', kde=False)
 
 programming.set(title='Most used Programming Language across repositories')
 programming.set(xlabel='Programming Language Used')
@@ -145,7 +145,7 @@ plt.clf()
 #######################################
 plt.figure(figsize=(100,10))
 
-programming = sns.histplot(df_contributors['login'], discrete=True, color='blue', kde=True)
+programming = sns.histplot(df_contributors['login'], discrete=True, color='blue', kde=False)
 programming.set(title='Contributors across the repositories')
 programming.set(xlabel='Contributors GitHub Username')
 programming.set(ylabel='Repositories count')
@@ -211,7 +211,7 @@ plt.clf()
 #####################################
 plt.figure(figsize=(15,10))
 
-programming = sns.histplot(df_repos['default_branch'], discrete=True, color='blue', kde=True)
+programming = sns.histplot(df_repos['default_branch'], discrete=True, color='blue', kde=False)
 
 programming.set(title='Most encountered default branch across repositories')
 programming.set(xlabel='Default Branch')

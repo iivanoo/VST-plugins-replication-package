@@ -1,0 +1,301 @@
+,html_url,name,functionality,core functionality,frameworks (others than JUCE),testing,language,SonarQube violations (SCP),"SonarQube quality gate status (passed,failed)",Header files,Compiled library files,Header files or compiled library files,Libraries,Comments,Issues type,Did the developers resolved the issue via a simple commit and push?,Did the developers resolved the issue via a PR?,Did the developers answered the issue?
+0,https://github.com/klknn/kdr,kdr,virtual instrument - synthesizer,virtual instrument,,No,D,,Passed,Yes,No,Header files,"std, dplug",Yes,"bug, enhancement",No,No,No
+5,https://github.com/hansen-audio/renegate-fx,renegate-fx,effect - gate,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+7,https://github.com/Wasted-Audio/wstd-eq,wstd-eq,effect - eq,effect,dpf,No,C++,,Passed,Yes,No,Header files,,Yes,help wanted,No,No,No
+11,https://github.com/AnClark/Minaton-XT,Minaton-XT,virtual instrument - synthesizer,virtual instrument,dpf,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+12,https://github.com/xivilay/scale-remapper,scale-remapper,effect - midi - scaller,effect,,No,C++,,Passed,Yes,No,Header files,,No,enhancement,No,No,No
+13,https://github.com/StoneyDSP/Biquads,Biquads,effect - filter for vocal processing ,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,bug,No,Yes,No
+14,https://github.com/patriceguyot/ComposeSiren,ComposeSiren,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,Yes
+19,https://github.com/azur1s/penare,penare,effect - distortion,effect,,No,Rust,Reliability E ,Passed,Yes,No,Header files,,Yes,,No,No,No
+20,https://github.com/eulmour/HandyOsc,HandyOsc,effect - from analog to digital,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+21,https://github.com/psemiletov/drumlabooh,drumlabooh,virtual instrument - drums,virtual instrument,,No,C++,"15.5% Duplications, Reliability E, Security Review E",Failed,Yes,No,Header files,,Yes,,No,No,No
+22,https://github.com/thezhe/D-lay,D-lay,effect - distortion delay,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+23,https://github.com/OlliV/DiaPro,DiaPro,effect - processor,effect,,No,C++,,Passed,Yes,Yes,Both,,Yes,"bug, enhacement",No,No,No
+24,https://github.com/njazz/cloudseed-juce,cloudseed-juce,effect - reverb,effect,,No,C++,,Passed,No,No,,,No,bug,No,No,No
+25,https://github.com/xivilay/chord-recognition,chord-recognition,effect - midi - chord recognition,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+26,https://github.com/SimonZimmer/SEELE,SEELE,effect - heavy vocal processing,effect,,Yes,C++,,Passed,Yes,No,Header files,,No,question,No,No,No
+30,https://github.com/wolf-tickets/sound-and-outer-space,sound-and-outer-space,effect - emulate how a sound will sound on another planet,effect,,No,C++,,Passed,Yes,No,Header files,,No,question,No,No,No
+32,https://github.com/gregormcw/elev8,elev8,effect - binaural spatializer,effect,,No,C++,,Passed,Yes,No,Header files,,No,question,No,No,No
+33,https://github.com/MeijisIrlnd/Transfer,Transfer,effect - distortion ,effect,,Yes,C++,Reliability B,Passed,Yes,No,Header files,,No,,No,No,No
+34,https://github.com/johanLsp/Milion,Milion,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,Yes,Both,,No,,No,No,No
+37,https://github.com/essenbee/multifilter,multifilter,effect - multiple audio filters,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+39,https://github.com/mariusz96/blue-synthesiser,blue-synthesiser,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+41,https://github.com/waddafunk/Oscilloscope,Oscilloscope,effect - oscilloscope,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+43,https://github.com/Juanmalopezg/smooth-distortion,smooth-distortion,effect - distortion,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+44,https://github.com/pongasoft/jamba-sample-gain,jamba-sample-gain,effect - gain ,effect,Jamba framework,Yes,C++,,Passed,Yes,Yes,Both,"argparse, os, sys, platform",Yes,,No,No,No
+45,https://github.com/midilab/jc303,jc303,virtual instrument - synthesizer,virtual instrument,,Yes,C++,Maintainability B,Passed,Yes,No,Header files,,Yes,"bug, enhancement",No,Yes,Yes
+46,https://github.com/sainsay/AudioPlugins,AudioPlugins,effect - a bunch of effects,effect,,No,C++,,Passed,Yes,No,Header files,,No,enhancement,No,No,No
+47,https://github.com/TheAvalanche/JustAudioFX,JustAudioFX,effect - delay,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+48,https://github.com/xuan25/RXG100-RE,RXG100-RE,effect - preamp,effect,,No,C#,,Passed,Yes,No,Header files,"System, AudioPlugSharp, AudioPlugSharpWPF",No,,No,No,No
+49,https://github.com/KevinToodlepoot/MS-Exciter,MS-Exciter,effect - stereo expander and harmonic exciter,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+50,https://github.com/caleqw2/ParticleArtsPlugin,ParticleArtsPlugin,effect - midi - bouncing 2D particles,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,No
+52,https://github.com/vihdzp/colimiter,colimiter,effect - invers limiter,effect,,No,Rust,,Passed,Yes,No,Header files,,Yes,,No,No,No
+55,https://github.com/dmultiply/Klide,Klide,virtual instrument - euclidean drum machine,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,Yes,"bug, enhancement, question, invalid, help wanted",No,No,No
+56,https://github.com/KaiDrange/ECMapper,ECMapper,effect - communicate with instrument and midi convertor,effect,,No,C++,Reliability C,Passed,Yes,No,Header files,,No,,No,No,No
+57,https://github.com/pongasoft/vst-ab-switch,vst-ab-switch,effect - A/B switch,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+59,https://github.com/bartoszOsn/FuzzTeeth,FuzzTeeth,effect - fuzzed distortion,effect,,No,C++,,Passed,Yes,Yes,Both,,Yes,question,No,No,Yes
+60,https://github.com/Dimethoxy/Plasma,Plasma,effect - distortion and warm filters,effect,,Yes,C++,"Maintainability B, Security Review E, cppcorectguideliness violated, performance affected negatively",Failed,Yes,No,Header files,,Yes,question,No,No,No
+62,https://github.com/pongasoft/vst-vac-6v,vst-vac-6v,effect - volume analyzer and peak volume controller,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+63,https://github.com/DoomyDwyer/ASPiKProjects,ASPiKProjects,effect - multiple pedals,effect,ASPiK framework,No,C++,,Passed,Yes,No,Header files,,Yes,bug,Yes,No,No
+64,https://github.com/Do-sth-sharp/libDMDA,libDMDA,effect - directly musical data access,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+66,https://github.com/polimi-ispl/ebeamer,ebeamer,effect -  beamforming for a specific instrument eSticks,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,"good first issue, enhancement",No,No,No
+68,https://github.com/reillypascal/RSAlgorithmicVerb,RSAlgorithmicVerb,effect - reverb plugin,effect,,No,C++,"4.6% duplications, cppcorectguideliness violated",Failed,Yes,No,Header files,,Yes,,No,No,No
+69,https://github.com/p-o-l-e/spiro,spiro,virtual instrument  - synthesiser,virtual instrument ,,No,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,Yes
+70,https://github.com/JoergBitzer/JadeSpectrogram,JadeSpectrogram,effect - spectogram,effect,,No,C++,,Passed,Yes,Yes,Both,,No,question,No,No,Yes
+72,https://github.com/MichaelBokatius/BlissBox,BlissBox,effect - guitar pedal,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+73,https://github.com/FilipeChagasDev/FClipper-plugin,FClipper-plugin,effect - clipper,effect,,No,C++,,Passed,Yes,Yes,Both,,Yes,,No,No,No
+76,https://github.com/adammurdocknh/YAMS,YAMS,effect - 30 second mastering,effect,,No,C++,,Passed,Yes,No,Header files,,No,question,No,No,Yes
+77,https://github.com/RickBn/reDroidFlux,reDroidFlux,effect -  MIDI controlled ring modulator ,effect,,No,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,No,question,No,No,Yes
+78,https://github.com/reillypascal/RSBrokenMedia,RSBrokenMedia,effect - stereo glitch,effect,,No,C,"Reliability C, 24.0% duplications",Passed,Yes,No,Header files,,No,bug,No,No,Yes
+79,https://github.com/mpusch88/Externalizer,Externalizer,"effect - latency compensation, dry/wet control, and gain staging.",effect,,Yes,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+82,https://github.com/varlen/randstepfilter,randstepfilter,effect - randstepfilter,effect,iPlug 2,No,Python,,Passed,Yes,No,Header files,,Yes,,No,No,No
+83,https://github.com/Emmet-Hayes/HayesPlugins,HayesPlugins,"effect - EQ, Compressor, Distortion, PitchShifter, a basic Delay, a tape Delay, an algorithmic Reverb, and a convolution Reverb.",effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+84,https://github.com/hansen-audio/gain-automation-plugin,gain-automation-plugin,effect - gain ,effect,,No,C++,Maintainability B,Passed,Yes,Yes,Both,,Yes,,No,No,No
+85,https://github.com/Speechrezz/VibratoPlugin,VibratoPlugin,effect - vibrato,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+87,https://github.com/pardinensis/useless_reverb,useless_reverb,effect  - reverb,effect ,,No,C++,,Passed,Yes,Yes,Both,,No,,No,No,No
+88,https://github.com/sharki13/stereoknob,stereoknob,effect - modify stereo proportion,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+89,https://github.com/samuelebh/Magic-Chorus,Magic-Chorus,effect - chorus,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+91,https://github.com/hsetlik/Octane,Octane,virtual instrument - Synthesizer wavetable,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,"enhancement, bug",No,No,No
+92,https://github.com/p4thie/esc,esc,effect - ducker,effect,,No,Rust,Reliability E,Passed,No,No,,"Visualizer, AtomicF32, ViziaState, Ordering, Arc",Yes,,No,No,No
+97,https://github.com/theuser27/Complex,Complex,effect - multi-lane spectral effects,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+99,https://github.com/ashokfernandez/DR-Filter,DR-Filter,effect - df filter,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+125,https://github.com/ptablas/M-S-Echottage,M-S-Echottage,effect - splitter,effect,,No,C++,,Passed,Yes,No,Header files,,No,question,No,No,No
+126,https://github.com/rochen-sound-collective/modular_collection,modular_collection,effect - midi arpeggiator,effect,,Yes,Rust,,Passed,No,No,,cdylib,No,,No,No,No
+127,https://github.com/silver-yar/ap_sampler,ap_sampler,virtual instrument  - sampler,virtual instrument ,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+128,https://github.com/toasty-ghost/ASE_KM_Caverb,ASE_KM_Caverb,effect - room reverb,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+129,https://github.com/tparker48/sherpa-synthesizer,sherpa-synthesizer,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+131,https://github.com/astra137/opus-parvulum,opus-parvulum,effect,effect,,No,Rust,,Passed,No,No,,"cdylib, VST3, IPluginFactory, IPluginFactory2, IPluginFactory3, IID",No,,No,No,No
+133,https://github.com/rklogan/Combiner,Combiner,effect ,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+134,https://github.com/suzumushi0/AudioQAM_source,AudioQAM_source,effect,effect,,No,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,Yes,,No,No,No
+136,https://github.com/hx-ux/Bitcrushi,Bitcrushi,effect - chrusher,effect,,No,Python,,Passed,Yes,No,Header files,,Yes,,No,No,No
+139,https://github.com/michael-truscott/DoomVst,DoomVst,effect - doom game,effect,,Yes,C,,Passed,Yes,No,Header files,,Yes,question,Yes,No,Yes
+141,https://github.com/ChaseDurand/simple-plugin-gui,simple-plugin-gui,effect - does nothing,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+142,https://github.com/JacobACan/RGBA-Synth,RGBA-Synth,virtual instrument - synthesizer,virtual instrument,,No,C++,Reliability B,Passed,Yes,No,Header files,,No,"good first issue, enhancement",No,No,No
+143,https://github.com/ReplicatAudio/TerminalVelocity,TerminalVelocity,effect - MIDI velocity tool,effect,,No,C++,Reliability B,Passed,Yes,No,Header files,,No,,No,No,No
+145,https://github.com/StunnedByMusic/LatencySpy,LatencySpy,effect - latency,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+151,https://github.com/likelian/Repeator,Repeator,effect - noise,effect,,No,C++,Maintainability B,Passed,Yes,No,Header files,,No,"enhancement, bug",Yes,Yes,No
+154,https://github.com/dragonsploder/Dynamo,Dynamo,effect - flager,effect,IPlug,No,C++,Reliability B,Passed,Yes,No,Header files,,No,,No,No,No
+158,https://github.com/LensPlaysGames/Gainbit,Gainbit,effect - gainer,effect,,No,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,Yes,,No,No,No
+159,https://github.com/Djaugo/EQ_Lite-Vst-Plugin-Win,EQ_Lite-Vst-Plugin-Win,effect - eq,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+160,https://github.com/tgalpha/ActivityTimer,ActivityTimer,effect - timer ,effect,,No,C++,,Passed,Yes,No,Header files,,No,bug,No,No,No
+161,https://github.com/Mg32/SymmetricPingPongDelay,SymmetricPingPongDelay,effect - delay,effect,,No,Faust,,Passed,No,No,,stdfaust,No,,No,No,No
+162,https://github.com/Husenap/VSTakoyaki,VSTakoyaki,effect - visualizator,effect,,No,C++,"Reliability D, Security Review E",Passed,Yes,No,Header files,,Yes,,No,No,No
+163,https://github.com/flafflar/FaderVST,FaderVST,effect - fader,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+164,https://github.com/alxtim10/AngklungBeats,AngklungBeats,effect - simulates an instrument,effect,,No,C++,,Passed,Yes,No,Header files,,No,question,No,No,Yes
+168,https://github.com/Speechrezz/SaturatorTest,SaturatorTest,effect - saturator,effect,,No,C++,Reliability C,Passed,Yes,No,Header files,,Yes,,No,No,No
+171,https://github.com/AnClark/synthv1-universal,synthv1-universal,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+174,https://github.com/mmomentum/dopplerjuce,dopplerjuce,effect - spatializer ,effect,,No,Objective-C,"Reliability E, Maintainability E",Passed,Yes,No,Header files,,Yes,,No,No,No
+176,https://github.com/essenbee/delay,delay,effect - delay,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+178,https://github.com/Cyril-Meyer/BitDepthReducer,BitDepthReducer,effect - depth,effect,,No,C++,Maintainability B,Passed,Yes,No,Header files,,No,bug,Yes,No,No
+181,https://github.com/AnClark/padthv1-universal,padthv1-universal,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+184,https://github.com/Leonidius20/MegaSynth,MegaSynth,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+187,https://github.com/sadmemelord/QuasoCompressor,QuasoCompressor,effect - compressor,effect,,No,C++,Reliability D,Passed,Yes,No,Header files,,Yes,,No,No,No
+188,https://github.com/werckme/werckmeister-vst,werckmeister-vst,effect ,effect,,No,C++,,Passed,Yes,Yes,Both,,No,,No,No,No
+191,https://github.com/HabzdaBalint/VST_Synth,VST_Synth,virtual instrument - synthesizer,virtual instrument,,No,C++,"cppcorectguideliness violated, 6.3% duplications",Failed,Yes,No,Header files,,No,,No,No,No
+192,https://github.com/insomnimus/drum-mapper,drum-mapper,effect - MIDI drums remapper,effect,,No,Rust,,Passed,Yes,No,Header files,Arc,No,,No,No,No
+194,https://github.com/rijadhubana/RSynth-v1,RSynth-v1,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+195,https://github.com/emanuelemessina/ReaShader,ReaShader,effect - visualizator,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+196,https://github.com/GiorgosKoulouris/DeCoderPlugin,DeCoderPlugin,effect - decoder,effect,,Yes,C++,"cppcorectguideliness violated, 13.0% duplications",Failed,Yes,Yes,Both,,No,,No,No,No
+303,https://github.com/asb2m10/dexed,dexed,virtual instrument - synthesizer,virtual instrument,,No,C++,"Reliability C, Maintainability B, Security Review E, 1.1% duplications",Failed,Yes,No,Header files,,Yes,"question, bug",No,Yes,Yes
+314,https://github.com/michaelwillis/dragonfly-reverb,dragonfly-reverb,effect - reverb,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,"question, bug",No,Yes,Yes
+316,https://github.com/monadgroup/axiom,axiom,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,"bug, compiler, question, backend, enhancement",No,Yes,Yes
+321,https://github.com/DamRsn/NeuralNote,NeuralNote,effect - transformator,effect,,Yes,C++,,Passed,Yes,No,Header files,,No,"enhancement, bug",Yes,Yes,Yes
+322,https://github.com/greatest-ape/OctaSine,OctaSine,virtual instrument - synthesizer,virtual instrument,,No,Rust,,Passed,Yes,No,Header files,octasine,No,"enhancement, bug question",Yes,Yes,Yes
+323,https://github.com/leomccormack/SPARTA,SPARTA,"effect - spatial audio production, reproduction and visualisation",effect,Sparta Audio Framework,No,C++,,Passed,Yes,No,Header files,,Yes,"help wanted, question, bug",Yes,Yes,Yes
+325,https://github.com/trummerschlunk/master_me,master_me,effect  - mastering,effect ,,No,C++,,Passed,Yes,No,Header files,"ebur128, stdfaust",Yes,"question, enhancement, bug, dsp, gui ",Yes,Yes,Yes
+327,https://github.com/amsynth/amsynth,amsynth,virtual instrument - synthesizer,virtual instrument,,Yes,C++,Maintainability B,Passed,Yes,No,Header files,,No,"enhancement, question, bug",No,Yes,Yes
+330,https://github.com/jpcima/ADLplug,ADLplug,virtual instrument - synthesizer,virtual instrument,,No,C++,"Reliability E, Security Review E, 15.3% duplications",Passed,Yes,No,Header files,,No,"question, bug",No,Yes,Yes
+332,https://github.com/ffAudio/Frequalizer,Frequalizer,effect - eq,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,questions,No,Yes,Yes
+336,https://github.com/zamaudio/zam-plugins,zam-plugins,effect,effect,,No,POV-Ray SDL,,Passed,Yes,No,Header files,,No,"bug, help wanted",No,Yes,Yes
+340,https://github.com/wolf-plugins/wolf-shaper,wolf-shaper,effect ,effect,,No,C++,"Reliability C, Security Review E, 1.1% duplications",Passed,Yes,Yes,Both,,No,"enhancement, bug, question",No,Yes,Yes
+341,https://github.com/sophiapoirier/destroyfx,destroyfx,effect,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,"question, bug",No,Yes,Yes
+344,https://github.com/james34602/SpleeterRT,SpleeterRT,effect,effect,,Yes,C,,Passed,Yes,No,Header files,,Yes,"question, bug",Yes,No,Yes
+345,https://github.com/dozius/DtBlkFx,DtBlkFx,effect,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,Yes
+346,https://github.com/p-hlp/CTAGDRC,CTAGDRC,effect - compressor,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+352,https://github.com/artfwo/andes,andes,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,question,No,No,Yes
+354,https://github.com/wolf-plugins/wolf-spectrum,wolf-spectrum,effect - spectogram,effect,,No,C++,"Reliability E, Security Review E, 1.5% duplications",Passed,Yes,Yes,Both,,No,"bug, new feature, enhancement, question, optimization",No,Yes,Yes
+355,https://github.com/seven-phases/spectrum-analyzer,spectrum-analyzer,effect - analyzer,effect,,No,C++,,Passed,Yes,No,Header files,,No,bug,No,No,Yes
+361,https://github.com/igorski/fogpad,fogpad,effect  - reverb,effect ,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+362,https://github.com/apohl79/GuitarAmp,GuitarAmp,effect  - amplificator for guitar,effect ,,No,C++,,Passed,Yes,No,Header files,,No,question,No,No,Yes
+363,https://github.com/szkkng/simple-reverb,simple-reverb,effect  - reverb,effect ,,No,C++,Reliability B,Passed,Yes,No,Header files,,Yes,"enhancement, question, bug",Yes,Yes,Yes
+364,https://github.com/igorski/regrader,regrader,effect - delay,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,"question, bug",No,Yes,Yes
+365,https://github.com/cvde/RoomReverb,RoomReverb,effect  - reverb,effect ,,No,C++,,Passed,Yes,No,Header files,,Yes,bug,No,Yes,Yes
+366,https://github.com/joshua-maros/audiobench,audiobench,virtual instrument - synthesizer,virtual instrument,,Yes,Rust,"Reliability C, Security D, Security Review E",Passed,No,No,,"argparse, pathlib, shutil, subprocess, sys, tempfile",No,"question, bug",No,Yes,Yes
+369,https://github.com/t-sin/soyboy-sp.vst3,soyboy-sp.vst3,virtual instrument - synthesizer,virtual instrument,,Yes,Rust,,Passed,No,No,,"bincode, egui_extras, egui_glow, glutin, num, rand, serde, vst3_com, vst3_sys",No,,No,No,No
+370,https://github.com/Iunusov/ShoutVST,ShoutVST,effect,effect,,Yes,C++,,Passed,Yes,Yes,Both,,No,bug,No,No,No
+372,https://github.com/igorski/VSTSID,VSTSID,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,Yes,Both,,Yes,"bug, enhancement",No,Yes,Yes
+373,https://github.com/attilammagyar/js80p,js80p,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,Yes,Both,,Yes,enhancement,No,No,Yes
+374,https://github.com/kushview/roboverb,roboverb,effect - reverb,effect,,No,C++,,Passed,Yes,No,Header files,,No,"bug, enhancement",Yes,No,Yes
+375,https://github.com/Archie3d/aeolus_plugin,aeolus_plugin,virtual instrument - synthesizer,virtual instrument,,No,C++,"Reliability E, Security Review E, 3.6% duplications, cppcorectguideliness violated",Failed,Yes,No,Header files,,No,"enhancement, question",No,No,Yes
+377,https://github.com/QVbDev/quantumVerb,quantumVerb,effect - reverb,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+378,https://github.com/reales/OB-Xd,OB-Xd,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+380,https://github.com/MikeMorenoDSP/EP-MK1,EP-MK1,virtual instrument - piano,virtual instrument,,No,Shell,,Passed,Yes,No,Header files,,No,question,No,No,Yes
+383,https://github.com/trackbout/ripchord,ripchord,effect - modify chord progressions,effect,,No,C++,"Security Review E, cppcorectguideliness violated",Failed,Yes,No,Header files,,Yes,question,No,No,No
+388,https://github.com/aliefhooghe/Gammou,Gammou,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,Yes,bug,No,No,No
+390,https://github.com/usdivad/Melodrumatic,Melodrumatic,effect  - pitcher ,effect ,,Yes,C++,"cppcorectguideliness violated, 6.3% duplications",Failed,Yes,No,Header files,,Yes,question,No,No,Yes
+391,https://github.com/qbroquetas/IV-XDelay,IV-XDelay,effect  ,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,Yes
+394,https://github.com/xunil-cloud/CloudReverb,CloudReverb,effect  - reverb,effect ,,Yes,C++,,Passed,Yes,No,Header files,,No,question,No,No,Yes
+397,https://github.com/Mrugalla/NEL-19,NEL-19,effect  - pitcher ,effect ,,No,C++,"Reliability E, Security Review E, 6.9% duplications",Failed,Yes,No,Header files,,No,question,No,No,Yes
+599,https://github.com/martinic/DrMixAISynth,DrMixAISynth,virtual instrument - synthesizer,virtual instrument,iPlug ,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+601,https://github.com/vroomai/vst,vst,effect - generate words to sounds,effect,,Yes,C++,Reliability C,Passed,Yes,No,Header files,,Yes,,No,No,No
+602,https://github.com/Iunusov/LameVST,LameVST,effect,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,"question, bug",No,No,No
+603,https://github.com/Squishy47/OpenVerb,OpenVerb,effect  - reverb,effect ,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+605,https://github.com/DBraun/TD-JUCE,TD-JUCE,virtual instrument and effect,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,Yes,question. bug,No,No,Yes
+606,https://github.com/17cupsofcoffee/digidist,digidist,effect,effect,,No,Rust,,Passed,No,No,,dylib,No,,No,No,No
+607,https://github.com/swesterfeld/spectmorph,spectmorph,effect  ,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,"question, bug",Yes,No,Yes
+609,https://github.com/WeirdConstructor/Kickmess,Kickmess,virtual instrument - synthesizer,virtual instrument,,Yes,Rust,,Passed,Yes,No,Header files,kickmessvst,Yes,question,No,No,Yes
+611,https://github.com/pongasoft/vst-sam-spl-64,vst-sam-spl-64,virtual instrument - sampler,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,Yes,enhancement,No,No,Yes
+615,https://github.com/SpotlightKid/ykchorus,ykchorus,effect - chorus,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+617,https://github.com/igorski/transformant,transformant,effect - filter,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,Yes
+618,https://github.com/igorski/homecorrupter,homecorrupter,effect,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,Yes
+619,https://github.com/datajake1999/OPL3GM_VSTi,OPL3GM_VSTi,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+622,https://github.com/unevens/Curvessor,Curvessor,effect,effect,,Yes,C++,"Maintainability B, Security Review E",Failed,Yes,No,Header files,,No,question,No,No,Yes
+623,https://github.com/nimbletools/misstortion1,misstortion1,effect - distortion,effect,,No,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,No,question,Yes,No,Yes
+624,https://github.com/linuxmao-org/VL1-emulator,VL1-emulator,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,No
+626,https://github.com/retornz/ToneZ,ToneZ,effect,effect,Cabbage,No,Csound Document,,Passed,No,No,,,No,"question, bug, enhancement",No,Yes,Yes
+630,https://github.com/abbysoft-team/Soompler,Soompler,virtual instrument - sampler,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+631,https://github.com/utokusa/BiquadLimiter,BiquadLimiter,effect - limiter,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+633,https://github.com/shaduzlabs/throb,throb,virtual instrument - sampler,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,question,No,No,No
+635,https://github.com/morukutsu/LondonClockT,LondonClockT,virtual instrument - drums,virtual instrument,,No,C++,"Reliability D, Security Review E",Passed,Yes,No,Header files,,Yes,question,No,No,Yes
+636,https://github.com/igorski/darvaza,darvaza,effect - gate,effect,,Yes,C++,,Passed,Yes,No,Header files,,No,question,No,No,No
+637,https://github.com/SoundDevelopment/sound_meter,sound_meter,effect,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,Yes
+638,https://github.com/FigBug/VirtualAnalog,VirtualAnalog,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+641,https://github.com/planaria/vv,vv,effect  - voice changer,effect ,,No,C++,,Passed,Yes,Yes,Both,,No,question,No,No,Yes
+642,https://github.com/sdeleon28/IgnitionGuitarAmp,IgnitionGuitarAmp,effect  - guitar amplificator,effect ,,No,C++,2.0% duplications,Passed,Yes,No,Header files,,No,bug,No,No,No
+643,https://github.com/SpotlightKid/midiomatic,midiomatic,effect,effect,,No,C++,,Passed,Yes,No,Header files,,No,bug,No,No,Yes
+646,https://github.com/LeifBloomquist/MIDIMapperX,MIDIMapperX,effect  - midi mapper ,effect ,,No,C#,,Passed,Yes,No,Header files,"System, Jacobi",Yes,"enahncement, bug, question",Yes,No,Yes
+647,https://github.com/olilarkin/iPlug2OnnxRuntime,iPlug2OnnxRuntime,effect - gain,effect,iPlug2,No,Python,Security Review E,Passed,No,No,,"fileinput, glob, string, sys, os, re, uuid, pprint, random, os, shutil",Yes,,No,No,No
+648,https://github.com/lucianoiam/castello,castello,effect - reverb,effect,dpf,No,C,,Passed,Yes,No,Header files,,No,bug,No,Yes,Yes
+649,https://github.com/monomadic/dd-plugs,dd-plugs,virtual instrument and effect,virtual instrument,,No,Rust,,Passed,No,No,,"vst2, simplelog, dd_dsp",No,,No,No,No
+650,https://github.com/ddf/SpectralHarp,SpectralHarp,virtual instrument - harp,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+651,https://github.com/sunquan8094/overtonix,overtonix,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+652,https://github.com/ddf/evaluator,evaluator,virtual instrument - sampler,virtual instrument,VST SDK,Yes,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,Yes
+654,https://github.com/leomccormack/CroPaC-Binaural,CroPaC-Binaural,effect - decoder,effect,Spatial Audio Framework,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+655,https://github.com/igorski/rechoir,rechoir,effect  - delay,effect ,,Yes,C++,,Passed,Yes,No,Header files,,Yes,question,No,No,Yes
+658,https://github.com/YPares/arpligner,arpligner,effect  - arpegiator,effect ,,Yes,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,No,"question, bug, enhancement",No,Yes,Yes
+661,https://github.com/AlexW00/clockwork,clockwork,effect - MIDI note repeater,effect,,No,Rust,,Passed,No,No,,"nih_plug_egui, std, nih_plug",No,question,No,No,Yes
+662,https://github.com/unevens/Overdraw,Overdraw,effect,effect,,Yes,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,No,,No,No,No
+668,https://github.com/VirtualRaven/KandVST,KandVST,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,Yes,Both,,No,bug,No,Yes,No
+669,https://github.com/lukemcraig/OvertoneFilter,OvertoneFilter,effect,effect,,No,C++,"Security Review E, 9.9% duplications",Failed,Yes,No,Header files,,No,question,No,No,No
+672,https://github.com/fake-industries/fuzzball,fuzzball,effect  - fuzz,effect ,,No,Rust,,Passed,No,No,,"vst, std",No,question,No,No,Yes
+673,https://github.com/lukemcraig/PathSynth,PathSynth,virtual instrument - synthesizer,virtual instrument,,No,C++,1.4% duplications,Failed,Yes,No,Header files,,No,question,No,No,No
+675,https://github.com/hotwatermorning/wahwth,wahwth,effect,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+676,https://github.com/LibreArp/LibreArp,LibreArp,virtual instrument - sampler,virtual instrument,,No,C++,"Reliability B, Security Review E, 0.3% duplications",Passed,Yes,No,Header files,,No,,No,No,No
+681,https://github.com/JohT/speclet,speclet,effect - analyzer,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+682,https://github.com/valsteen/note_effects_vst,note_effects_vst,effect,effect,,No,Rust,,Passed,No,No,,"vst, std",No,,No,No,No
+683,https://github.com/p-hlp/SMPLComp,SMPLComp,effect - compressor,effect,,No,C++,suspicious use of empty methods,Failed,Yes,No,Header files,,No,,No,No,No
+686,https://github.com/davemollen/dm-GrainDelay,dm-GrainDelay,effect - delay,effect,,No,CSS,Security Review E,Passed,No,No,,,No,question,No,No,Yes
+692,https://github.com/vertver/Dynation,Dynation,effect,effect,,No,C,,Passed,Yes,No,Header files,,No,question,No,No,Yes
+729,https://github.com/JamesStubbsEng/TS-808-Ultra,TS-808-Ultra,effect,effect,,No,C++,,Passed,Yes,No,Header files,,No,bug,No,No,No
+785,https://github.com/nberr/jackel,jackel,effect - MIDI note translator,effect,,No,C++,,Passed,Yes,No,Header files,,No,question,No,No,No
+800,https://github.com/BLumia/PineappleSynth,PineappleSynth,virtual instrument - synthesizer,virtual instrument,WDL-OL,Yes,C++,,Passed,Yes,No,Header files,,Yes,enhancement,No,No,No
+802,https://github.com/canokaue/azr3-mac,azr3-mac,virtual instrument - organ,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+917,https://github.com/publicsamples/Peach,Peach,virtual instrument - synthesizer,virtual instrument,,No,JavaScript,,Passed,No,No,,,No,,No,No,No
+928,https://github.com/gamingrobot/daw-out,daw-out,effect,effect,,No,Rust,,Passed,No,No,,"anyhow, crossbeam_channel, nih_plug, parking_lot, rosc, rubato, std",No,,No,No,No
+929,https://github.com/jcfischer/easylooper,easylooper,effect - looper,effect,,Yes,Rust,,Passed,No,No,,"simplelog, num_traits, asprim, std, app_dirs, vst, easyvst, looper_fsm, looper_fsm, tinyui,  recording_buffer, std, version",No,,No,No,No
+930,https://github.com/POTR-Soft/Chord-Filter,Chord-Filter,effect - filter,effect,,Yes,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,No,,No,No,No
+934,https://github.com/david6983/saxaboom,saxaboom,virtual instrument - sampler,virtual instrument,,No,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,No,enhancement,No,No,No
+938,https://github.com/TobiasKozel/transmitter,transmitter,effect,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+941,https://github.com/davemollen/dm-Reverse,dm-Reverse,effect - reverse delay,effect,,No,CSS,Security Review E,Passed,Yes,No,Header files,,No,,No,No,No
+944,https://github.com/00laboratories/HISE-AG-20,HISE-AG-20,virtual instrument - guitar,virtual instrument,,No,JavaScript,,Passed,No,No,,,No,question,No,No,Yes
+950,https://github.com/imchristina/piano,piano,virtual instrument - piano,virtual instrument,,Yes,Lua,,Passed,No,No,,"vst, hybrid_string",No,question,No,No,Yes
+951,https://github.com/jthorborg/signalizer,signalizer,effect - visualizator,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+952,https://github.com/TaleTN/IPlugExample,IPlugExample,effect - tremolo,effect,iPlug Tale Edition,No,Makefile,,Passed,Yes,Yes,Both,,Yes,,No,No,No
+954,https://github.com/TheTechnobear/SSP,SSP,effect,effect,,Yes,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+957,https://github.com/DropSnorz/wobbleizer,wobbleizer,effect,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+962,https://github.com/safiire/kitty_synth_vst,kitty_synth_vst,virtual instrument - synthesizer,virtual instrument,,No,C,,Passed,Yes,No,Header files,,Yes,,No,No,No
+965,https://github.com/vocalodon/VocalodonVST,VocalodonVST,effect ,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+967,https://github.com/Flixor/IRBaboon,IRBaboon,effect,effect,,Yes,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+968,https://github.com/HarrisonBubbles/OasisAudioPlugin,OasisAudioPlugin,effect,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+969,https://github.com/KottV/SimpleSide,SimpleSide,effect - volume LFO,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+970,https://github.com/lukemcraig/farkle,farkle,"effect - ""Farkle"" effect",effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+972,https://github.com/rickgiantsteps/bucket-brigade,bucket-brigade,effect - delay bridge,effect,,No,C++,"0.7% duplications, cppcorectguideliness violated",Failed,Yes,No,Header files,,No,,No,No,No
+973,https://github.com/Uberton/Uberton,Uberton,effect,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+978,https://github.com/ChromaticIsobar/HyperTremolo,HyperTremolo,effect - tremolo ,effect,,No,C++,1.6% duplications,Passed,Yes,No,Header files,,No,,No,No,No
+982,https://github.com/sunquan8094/Krush3x,Krush3x,effect - chrusher,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+984,https://github.com/sabeiro/McAmp,McAmp,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,"matplotlib, numpy, pylab, wave, array, scipy",No,,No,No,No
+985,https://github.com/osam-cologne/stereogain,stereogain,effect - gain,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+994,https://github.com/EmilianStankov/rvst,rvst,effect,effect,,No,Rust,,Passed,No,No,,"vst, oscillator, waves, note",No,,No,No,No
+1000,https://github.com/krmnn/MIDIVelocityZone,MIDIVelocityZone,effect - MIDI keys velocity ,effect,,Yes,C++,93.1% duplications,Failed,Yes,No,Header files,,No,,No,No,No
+1003,https://github.com/johncollinson2001/multifuzz,multifuzz,effect - multi-band distortion,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+1004,https://github.com/RBLG/Grapher,Grapher,virtual instrument - synthesizer,virtual instrument,,No,C#,,Passed,No,No,,"GrapherVST, Jacobi, Microsoft, System",Yes,,No,No,No
+1005,https://github.com/rm8x/myowah,myowah,effect - wahwah,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1006,https://github.com/morukutsu/ParisHarmony,ParisHarmony,virtual instrument - chords generator,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1014,https://github.com/wolf-plugins/wolf-lfo,wolf-lfo,effect - LFO,effect,,No,C++,Maintainability B,Passed,Yes,No,Header files,,No,,No,No,No
+1015,https://github.com/miladnia/KeysVST,KeysVST,virtual instrument - piano,virtual instrument,,No,JavaScript,Reliability C,Passed,No,No,,,Yes,,No,No,No
+1019,https://github.com/surge-synthesizer/surge,surge,virtual instrument - synthesizer,virtual instrument,,Yes,C,,Passed,Yes,No,Header files,,Yes,"enhancement, feature request, bug, question",No,Yes,Yes
+1025,https://github.com/jatinchowdhury18/AnalogTapeModel,AnalogTapeModel,effect - tape,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,"bug, question",No,Yes,Yes
+1037,https://github.com/Chowdhury-DSP/ChowMatrix,ChowMatrix,effect - delay,effect,,No,C++,"Security Review E, 1.2% duplications",Passed,Yes,No,Header files,,No,,No,No,No
+1038,https://github.com/vvvar/PeakEater,PeakEater,effect - wave shapper,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+1041,https://github.com/JanosGit/Schrammel_OJD,Schrammel_OJD,effect - overdrive,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1047,https://github.com/utokusa/OS-251,OS-251,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,No,request,No,Yes,Yes
+1056,https://github.com/hollance/mda-plugins-juce,mda-plugins-juce,"effect - overdrive, delay, degrade, ringmod",effect,,Yes,C,,Passed,Yes,Yes,Both,,No,,No,No,No
+1068,https://github.com/tobanteAudio/modEQ,modEQ,effect - eq,effect,,Yes,C++,Maintainability B,Passed,Yes,No,Header files,,No,,No,No,No
+1074,https://github.com/khrykin/BlackBird,BlackBird,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1075,https://github.com/vgorloff/VST3NetSend,VST3NetSend,effect ,effect,,Yes,Swift,"Reliability D, Security Review E",Passed,No,No,,"child_process,  path, gulp, fs, os, url, plist, glob",No,,No,No,No
+1079,https://github.com/szkkng/jr-granular,jr-granular,effect,effect,,No,Max,,Passed,Yes,No,Header files,,No,,No,No,No
+1081,https://github.com/robbert-vdh/diopser,diopser,effect - rotation,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+1082,https://github.com/SmEgDm/equalize_it,equalize_it,effect - eq,effect,,No,C++,Reliability D,Passed,Yes,No,Header files,,No,,No,No,No
+1092,https://github.com/prof-spock/SoX-Plugins,SoX-Plugins,effect,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+1104,https://github.com/stfufane/Midi-Transposer,Midi-Transposer,effect - MIDI bass ,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+1107,https://github.com/blackboxdsp/rotor,rotor,effect - ring modulation,effect,,No,C++,Reliability B,Passed,Yes,No,Header files,,No,,No,No,No
+1108,https://github.com/elk-audio/mda-vst3,mda-vst3,effect,effect,,No,C,,Passed,Yes,No,Header files,,No,,No,No,No
+1113,https://github.com/fukuroder/BLIT-based_sinewave_hardsync,BLIT-based_sinewave_hardsync,effect,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+1114,https://github.com/blackboxdsp/phantom,phantom,virtual instrument - synthesizer,virtual instrument,,No,C++,Reliability B,Passed,Yes,No,Header files,,Yes,,No,No,No
+1115,https://github.com/sfztools/sfizz-ui,sfizz-ui,virtual instrument - sampler,virtual instrument,,No,C,,Passed,Yes,No,Header files,,No,"bug, question",No,Yes,Yes
+1117,https://github.com/werman/noise-suppression-for-voice,noise-suppression-for-voice,effect - noise suppresion,effect,,Yes,C,,Passed,Yes,No,Header files,,No,question,No,No,Yes
+1118,https://github.com/DISTRHO/Cardinal,Cardinal,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,No,"enhancement, bug, question",No,Yes,Yes
+1123,https://github.com/jerryuhoo/Fire,Fire,effect - distortion,effect,,Yes,C++,"Reliability C, 6.7% duplications",Passed,Yes,No,Header files,,No,"bug, question",No,No,No
+1124,https://github.com/hzdgopher/64klang,64klang,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,question,No,No,No
+1125,https://github.com/hzdgopher/4klang,4klang,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,Yes,Both,,No,"question, enhancement",No,No,No
+1129,https://github.com/mzuther/Squeezer,Squeezer,effect - compressor,effect,,Yes,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+1130,https://github.com/mzuther/K-Meter,K-Meter,effect - loudness,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1136,https://github.com/Chowdhury-DSP/CHOW,CHOW,effect - distortion,effect,,No,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,No,,No,No,No
+1137,https://github.com/s-oram/Grace,Grace,virtual instrument - sampler,virtual instrument,,Yes,Pascal,"Reliability E, Maintainability C, Security Review E, Duplication 0.8% ",Failed,No,No,,,No,,No,No,No
+1140,https://github.com/TobiasKozel/GuitarD,GuitarD,effect,effect,,Yes,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1141,https://github.com/jpcima/string-machine,string-machine,virtual instrument - strings,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,No,question,No,No,Yes
+1145,https://github.com/jpcima/HybridReverb2,HybridReverb2,effect - reverb,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1146,https://github.com/klknn/synth2,synth2,virtual instrument - synthesizer,virtual instrument,,Yes,D,Quality gate passed ,Passed,No,No,,"dplug, synth2, mir, core",No,,No,No,No
+1151,https://github.com/mzuther/traKmeter,traKmeter,effect - loudness,effect,,No,C++,,Passed,Yes,No,Header files,,Yes,,No,No,No
+1154,https://github.com/KaixoCode/CMBNEX,CMBNEX,virtual instrument - synthesizer,virtual instrument,,Yes,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1159,https://github.com/leomccormack/HO-SIRR-GUI,HO-SIRR-GUI,effect,effect,,No,C++,Reliability B,Passed,Yes,No,Header files,,No,,No,No,No
+1172,https://github.com/SpotlightKid/dfzitarev1,dfzitarev1,effect - reverb,effect,,No,C++,Maintainability C,Passed,Yes,No,Header files,,No,,No,No,No
+1173,https://github.com/SpotlightKid/stereocrossdelay,stereocrossdelay,effect - delay,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1180,https://github.com/killbizz/Biztortion,Biztortion,effect - distortion,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1184,https://github.com/SpotlightKid/sendmixer,sendmixer,effect - master,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1186,https://github.com/lukemcraig/MusicalRingMod,MusicalRingMod,effect ,effect,,No,C++,leak,Failed,Yes,No,Header files,,No,,No,No,No
+1187,https://github.com/ABSounds/Harpejji-VST,Harpejji-VST,virtual instrument - strings,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1189,https://github.com/SpotlightKid/transportgate,transportgate,effect - gate,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1192,https://github.com/kcuric/kodiak,kodiak,effect - distortion,effect,,No,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,No,,No,No,No
+1197,https://github.com/YeshiNamkhai/mioSynth,mioSynth,virtual instrument - synthesizer,virtual instrument,,No,HTML,Reliability E,Passed,No,No,,,No,,No,No,No
+1198,https://github.com/WrongPeople/JustRepeat,JustRepeat,effect - repeater,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1199,https://github.com/almostdefinitelycode/DCOffsetter,DCOffsetter,effect - offset,effect,,No,C++,Maintainability B,Passed,Yes,No,Header files,,No,,No,No,No
+1203,https://github.com/GrieferPig/zippify,zippify,effect - distortion and clipper,effect,,No,Rust,,Passed,No,No,,"raw_window_handle, std, vst",No,,No,No,No
+1204,https://github.com/maxklint/patch-discord,patch-discord,effect - MIDI eraser,effect,,Yes,Csound Document,,Passed,Yes,No,Header files,,No,,No,No,No
+1206,https://github.com/johnfmcrae/NoiseGenerator,NoiseGenerator,virtual instrument - noise generator,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1210,https://github.com/TobiasKozel/rektifier,rektifier,effect - distortion,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1219,https://github.com/ntomassetti/DesuMateVST,DesuMateVST,effect - decimator,effect,,No,C++,"brain-overload, cppcorectguideliness violated",Failed,Yes,No,Header files,,No,,No,No,No
+1221,https://github.com/Janislav/Pluto,Pluto,virtual instrument - synthesizer,virtual instrument,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1222,https://github.com/alexyer/digidist,digidist,effect - distortion,effect,,No,Rust,,Passed,No,No,,vst,No,,No,No,No
+1227,https://github.com/chrigervi/Orpheus,Orpheus,effect,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1228,https://github.com/blaketeres/Boomerang-Delay-Plugin-VST-AU-,Boomerang-Delay-Plugin-VST-AU-,effect,effect,,No,C++,Reliability B,Passed,Yes,No,Header files,,No,,No,No,No
+1231,https://github.com/uchidama/SimpleSynthEx,SimpleSynthEx,effect - MIDI synthesizer plugin,effect,,No,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1244,https://github.com/uchidama/WhiteNoiseSynthPluginEx,WhiteNoiseSynthPluginEx,effect - MIDI synthesizer plugin,effect,,No,C++,Maintainability B,Passed,Yes,No,Header files,,No,,No,No,No
+1245,https://github.com/hectorbennett/hecto-drive,hecto-drive,effect - distortion,effect,nig-plug,No,TypeScript,,Passed,No,No,,"audio_setup, buffer, context, editor, formatters, midi, nih_debug_assert_eq, plugin, prelude, util, wrapper, serde, nih_plug_webview, std, serde_json",No,,No,No,No
+1246,https://github.com/Kareus/ABit,ABit,virtual instrument,virtual instrument,,Yes,C++,Maintainability B,Passed,Yes,No,Header files,,Yes,,No,No,No
+1247,https://github.com/notwa/crap,crap,effect,effect,,Yes,C++,,Passed,Yes,No,Header files,,No,,No,No,No
+1249,https://github.com/JosephTLyons/Track-Notes-1,Track-Notes-1,effect,effect,,Yes,C++,"bad-practice, cppcorectguideliness violated",Failed,Yes,No,Header files,,No,,No,No,No
+1252,https://github.com/konstice/SignatureLine,SignatureLine,effect  - distortion,effect ,,No,C++,"Reliability D, cppcorectguideliness violated",Failed,Yes,No,Header files,,No,,No,No,No
+1255,https://github.com/defrankland/VstAudioEqMeter,VstAudioEqMeter,effect,effect,,No,Java,,Passed,No,No,,"awt, swing, wrapper, util",Yes,,No,No,No
+1266,https://github.com/brayschurman/venue,venue,effect,effect,,No,Rust,,Passed,No,No,,vst,No,,No,No,No
+1269,https://github.com/Lolitron-0/Kaoss-emul,Kaoss-emul,effect,effect,,Yes,C++,Maintainability C,Passed,Yes,No,Header files,,No,,No,No,No
+1277,https://github.com/crowbait/GnomeDistort,GnomeDistort,effect - distortion,effect,,Yes,C++,"Reliability C, Maintainability B, cppcorectguideliness violated",Failed,Yes,No,Header files,,No,,No,No,No
+1285,https://github.com/haszari/PhraseSyncPlugins,PhraseSyncPlugins,effect,effect,,No,C++,,Passed,Yes,Yes,Both,,No,,No,No,No
+1286,https://github.com/scriptorum/SMBigSkin,SMBigSkin,virtual instrument - synthesizer,virtual instrument,,Yes,JavaScript,Security Review E,Passed,No,No,,,Yes,,No,No,No
+1297,https://github.com/dsp-re/suzirya,suzirya,effect - reverb,effect,,No,C++,cppcorectguideliness violated,Failed,Yes,No,Header files,,No,,No,No,No
+1312,https://github.com/WeirdConstructor/HexoSynth,HexoSynth,virtual instrument - synthesizer,virtual instrument,,Yes,Rust,,Passed,No,No,,"wlambda, hexotk, open_window, ext_param_model, std",No,,No,No,No
+1345,https://github.com/demberto/fxp,fxp,effect - parser,effect,,Yes,Python,,Passed,No,No,,"enum, os, construct ",Yes,,No,No,No
+1346,https://github.com/defuse/vst_plugin,vst_plugin,effect,effect,,No,Rust,,Passed,No,No,,"vst, std",No,,No,No,No
+1349,https://github.com/tomto66/Topiary-Riffz,Topiary-Riffz,effect,effect,,Yes,C++,Realiability C,Passed,Yes,No,Header files,,No,,No,No,No
+1404,https://github.com/strikles/UQLRF-500,UQLRF-500,effect,effect,,No,Rust,,Passed,No,No,,"vst, karplus, std",No,,No,No,No
+1405,https://github.com/pfeeyatko/simple-eq,simple-eq,effect - eq,effect,,No,C++,"Reliability B, Maintainability B",Passed,Yes,No,Header files,,No,,No,No,No

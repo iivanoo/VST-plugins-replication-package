@@ -82,9 +82,9 @@ plt.clf()
 
 plt.figure(figsize=(20,20))
 
-scp = sns.histplot(df_scp['SonarQube violations (SCP)'].str.strip(), discrete=True, color='blue', kde=False)
+scp = sns.histplot(df_scp['SonarQube SCP tangled '].str.strip(), discrete=True, color='blue', kde=False)
 
-scp.set(xlabel='Standard code practices tangled')
+scp.set(xlabel='Standard Code Practices tangled')
 scp.set(ylabel='Repositories count')
 
 plt.xticks(rotation=45, ha='right')

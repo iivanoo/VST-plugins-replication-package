@@ -105,7 +105,31 @@ def mine_users_age():
     users_details = pd.json_normalize(data)
     users_details.to_csv('repo_final_mined_data//curated_csv//users_details.csv')
 
-    
+def mine_git_issues_content():
+    # Loading categorized csv file as dataframe
+    df = pd.read_csv('repo_final_mined_data//curated_csv//repos_that_have_issues_and_prs.csv')
+    repos_name = list(df['full_name'])
+    for repo in repos_name:
+        time.sleep(10)
+        repo_name = repo.replace('/','-')
+        urls = requests.get('https://api.github.com/search/issues?q=repo:'+repo+'&is:issue&is:open', headers={'Authorization': 'Bearer '+TOKEN})
+        data = urls.json()
+        with open('repo_final_mined_data//issues//'+repo_name+'_issues.json', 'w') as f:
+            json.dump(data, f)
+        pprint('issues gathered for repo: ' + repo)
+
+def mine_git_prs_content():
+    # Loading categorized csv file as dataframe
+    df = pd.read_csv('repo_final_mined_data//curated_csv//repos_that_have_issues_and_prs.csv')
+    repos_name = list(df['full_name'])
+    for repo in repos_name:
+        time.sleep(10)
+        repo_name = repo.replace('/','-')
+        urls = requests.get('https://api.github.com/search/issues?q=repo:'+repo+'&is:pr&is:open', headers={'Authorization': 'Bearer '+TOKEN})
+        data = urls.json()
+        with open('repo_final_mined_data//prs//'+repo_name+'_prs.json', 'w') as f:
+            json.dump(data, f)
+        pprint('prs gathered for repo: ' + repo)
    
 def merge_json_files():
     # For repo basic info
@@ -397,3 +421,6 @@ def mine_more_data_and_create_dataframes():
 #mine_git_repos_programming_languages()
 #mine_users_age()
 #mine_git_repos_contributors()
+#mine_git_issues_content()
+#mine_git_issues_content()
+#mine_git_prs_content()

@@ -110,27 +110,55 @@ def mine_git_issues_content():
     df = pd.read_csv('repo_final_mined_data//curated_csv//repos_that_have_issues_and_prs.csv')
     repos_name = list(df['full_name'])
     for repo in repos_name:
-        time.sleep(10)
-        repo_name = repo.replace('/','-')
-        urls = requests.get('https://api.github.com/search/issues?q=repo:'+repo+'&is:issue&is:open', headers={'Authorization': 'Bearer '+TOKEN})
-        data = urls.json()
-        with open('repo_final_mined_data//issues//'+repo_name+'_issues.json', 'w') as f:
-            json.dump(data, f)
-        pprint('issues gathered for repo: ' + repo)
+        for x in range(12):
+            time.sleep(10)
+            repo_name = repo.replace('/','-')
+            urls = requests.get('https://api.github.com/search/issues?q=repo:'+repo+'&is:issue&is:open&page='+str(x)+'&per_page=100', headers={'Authorization': 'Bearer '+TOKEN})
+            data = urls.json()
+            with open('repo_final_mined_data//issues//'+repo_name+'_issues_pageNumber_'+str(x)+'.json', 'w') as f:
+                json.dump(data, f)
+            pprint('issues gathered for repo: ' + repo + 'page' + str(x))
+    merged_issues_content = []
+    for f in glob.glob('repo_final_mined_data//issues//*.json'):
+        with open(f, 'r', encoding='utf-8') as file_in:
+            for line in file_in:
+                a_dict = json.loads(line)
+                merged_issues_content.append(a_dict)
+    with open('repo_final_mined_data//mined_repo_issues_content.json', 'w', encoding='utf-8') as file_out:
+        json.dump(merged_issues_content, file_out)
+    with open('repo_final_mined_data//mined_repo_issues_content.json') as file_in:
+        data = json.load(file_in)
+    df_issues = pd.json_normalize(data)
+    df_issues_content = pd.json_normalize(df_issues['items'].explode())
+    df_issues_content.to_csv('repo_final_mined_data//curated_csv//issues_content_final.csv')
 
 def mine_git_prs_content():
     # Loading categorized csv file as dataframe
     df = pd.read_csv('repo_final_mined_data//curated_csv//repos_that_have_issues_and_prs.csv')
     repos_name = list(df['full_name'])
     for repo in repos_name:
-        time.sleep(10)
-        repo_name = repo.replace('/','-')
-        urls = requests.get('https://api.github.com/search/issues?q=repo:'+repo+'&is:pr&is:open', headers={'Authorization': 'Bearer '+TOKEN})
-        data = urls.json()
-        with open('repo_final_mined_data//prs//'+repo_name+'_prs.json', 'w') as f:
-            json.dump(data, f)
-        pprint('prs gathered for repo: ' + repo)
-   
+        for x in range(12):
+            time.sleep(10)
+            repo_name = repo.replace('/','-')
+            urls = requests.get('https://api.github.com/search/issues?q=repo:'+repo+'&is:pr&is:open&page='+str(x)+'&per_page=100', headers={'Authorization': 'Bearer '+TOKEN})
+            data = urls.json()
+            with open('repo_final_mined_data//prs//'+repo_name+'_issues_pageNumber_'+str(x)+'.json', 'w') as f:
+                json.dump(data, f)
+            pprint('prs gathered for repo: ' + repo)
+    merged_prs_content = []
+    for f in glob.glob('repo_final_mined_data//prs//*.json'):
+        with open(f, 'r', encoding='utf-8') as file_in:
+            for line in file_in:
+                a_dict = json.loads(line)
+                merged_prs_content.append(a_dict)
+    with open('repo_final_mined_data//mined_repo_prs_content.json', 'w', encoding='utf-8') as file_out:
+        json.dump(merged_prs_content, file_out)
+    with open('repo_final_mined_data//mined_repo_prs_content.json') as file_in:
+        data = json.load(file_in)
+    df_prs = pd.json_normalize(data)
+    df_prs_content = pd.json_normalize(df_prs['items'].explode())
+    df_prs_content.to_csv('repo_final_mined_data//curated_csv//prs_content_final.csv')
+
 def merge_json_files():
     # For repo basic info
     merged_contents_basic_info = []
@@ -421,6 +449,5 @@ def mine_more_data_and_create_dataframes():
 #mine_git_repos_programming_languages()
 #mine_users_age()
 #mine_git_repos_contributors()
-#mine_git_issues_content()
 #mine_git_issues_content()
 #mine_git_prs_content()

@@ -17,7 +17,8 @@ df_repos = pd.read_csv('CSVs Used//final_data_curated - final_data_curated_categ
 df_programming_languages = pd.read_csv('CSVs Used//only_programming_languages_used_across_categorized_repositories.csv')
 df_contributors = pd.read_csv('CSVs Used//contributors_details.csv')
 df_users = pd.read_csv('CSVs Used//users_details.csv')
-
+df_issues_content = pd.read_csv('CSVs Used//issues_content_final.csv')
+df_prs_content = pd.read_csv('CSVs Used//prs_content_final.csv')
 
 ##################################
 ########## REPO TOPICS ###########
@@ -106,7 +107,6 @@ plt.savefig("Figures//created_at.png")
 plt.clf()
 
 
-
 ###################################
 ########## SIZE OF REPO ###########
 ###################################
@@ -121,8 +121,6 @@ size.set(xlabel='Repositories', ylabel='Size (Kb)')
 plt.tight_layout()
 plt.savefig("Figures//size.png")
 plt.clf()
-
-
 
 ###########################################
 ########## PROGRAMMING LANGUAGE ###########
@@ -451,3 +449,66 @@ plt.savefig("Figures//users_age.png")
 plt.clf()
 
 df_users_age.to_csv("Output CSVs/users_details.csv")
+
+
+#############################################
+########## TIME TO CLOSE AN ISSUE ###########
+#############################################
+plt.figure(figsize=(15,10))
+
+mask = (df_issues_content['created_at'].str.slice(0,10) < '2023-09-27') & (df_issues_content['closed_at'].str.slice(0,10) < '2023-09-27')
+df_time_issue = df_issues_content.loc[mask]
+
+df_time_issue['created_at'] = pd.to_datetime(df_time_issue['created_at'].str.slice(0,10),format='%Y-%m-%d')
+df_time_issue['closed_at'] = pd.to_datetime(df_time_issue['closed_at'].str.slice(0,10),format='%Y-%m-%d')
+df_time_issue['days_age'] =  (df_time_issue['closed_at'] - df_time_issue['created_at']).dt.days
+df_time_issue.to_csv('Output CSVs//Issues_content_until_27.09.2023.csv')
+
+age = sns.violinplot(data=df_time_issue, y=df_time_issue['days_age'], palette='Blues_d')
+sns.boxplot(y=df_time_issue['days_age'], data=df_time_issue, palette='Blues', width=0.3,boxprops={'zorder': 2})
+
+age.set(xlabel='Repositories')
+age.set(ylabel='Time in days to close an issue')
+
+plt.savefig("Figures//issue_close_time.png")
+plt.clf()
+
+
+#########################################
+########## TIME TO CLOSE A PR ###########
+#########################################
+plt.figure(figsize=(15,10))
+
+mask = (df_prs_content['created_at'].str.slice(0,10) < '2023-09-27') & (df_prs_content['closed_at'].str.slice(0,10) < '2023-09-27')
+df_time_pr = df_prs_content.loc[mask]
+
+df_time_pr['created_at'] = pd.to_datetime(df_time_pr['created_at'].str.slice(0,10),format='%Y-%m-%d')
+df_time_pr['closed_at'] = pd.to_datetime(df_time_pr['closed_at'].str.slice(0,10),format='%Y-%m-%d')
+df_time_pr['days_age'] =  (df_time_pr['closed_at'] - df_time_pr['created_at']).dt.days
+df_time_pr.to_csv("Output CSVs//PR_content_until_27.09.2023.csv")
+
+# Time to close a pull request
+age = sns.violinplot(data=df_time_pr, y=df_time_pr['days_age'], palette='Blues_d')
+sns.boxplot(y=df_time_pr['days_age'], data=df_time_pr, palette='Blues', width=0.3,boxprops={'zorder': 2})
+age.set(xlabel='Repositories')
+age.set(ylabel='Time in days to close a pull request')
+plt.savefig("Figures//pr_close_time.png")
+plt.clf()
+
+######################################################
+########## ISSUES THAT ARE CLOSED VIA A PR ###########
+######################################################
+plt.figure(figsize=(15,10))
+
+mask = (df_issues_content['created_at'].str.slice(0,10) < '2023-09-27') & (df_issues_content['closed_at'].str.slice(0,10) < '2023-09-27') & (df_issues_content['state'] == 'closed')
+df_tied_issues = df_issues_content.loc[mask]
+df_tied_issues['closed_via_pr'] = df_tied_issues['pull_request.url'].fillna('Not closed via a PR')
+df_tied_issues['closed_via_pr'] = df_tied_issues['closed_via_pr'].mask(df_tied_issues['closed_via_pr'].str.startswith('https'),'Closed via a PR')
+
+issues_tied = sns.histplot(df_tied_issues['closed_via_pr'], discrete=True, color='blue', kde=False)
+issues_tied.set(xlabel='Issues closed/not closed via a PR')
+issues_tied.set(ylabel='Issues')
+
+plt.savefig("Figures//issue_closed_via_pr.png")
+plt.clf()
+

@@ -18,6 +18,8 @@ df_contributors = pd.read_csv('CSVs Used//contributors_details.csv')
 df_users = pd.read_csv('CSVs Used//users_details.csv')
 df_issues_content = pd.read_csv('CSVs Used//issues_content_final.csv')
 df_prs_content = pd.read_csv('CSVs Used//prs_content_final.csv')
+df_library_initial = pd.read_csv('CSVs Used//libraries_used.csv')
+df_frameworks = pd.read_csv('CSVs Used//frameworks_used.csv')
 
 # date when the data was mined 
 datetime_str = '2023-09-27'
@@ -116,22 +118,20 @@ sns.boxplot(y=df_repos[df_repos["size"]<100000]["size"], data=df_repos, palette=
 size.set(ylim = (0,99900))
 size.set(xlabel='Repositories', ylabel='Size (Kb)')
 
-plt.tight_layout()
 plt.savefig("Figures//size.png",bbox_inches='tight')
 plt.clf()
 
 ###########################################
 ########## PROGRAMMING LANGUAGE ###########
 ###########################################
-plt.figure(figsize=(20,10))
+plt.figure(figsize=(4,11))
 
 df_language_count = pd.DataFrame(data = df_programming_languages['language'])
 df_language_count['count_per_language'] = df_language_count.groupby(df_programming_languages['language'])['language'].transform('size')
 
-plt.bar(df_programming_languages['language'],df_language_count['count_per_language'])
-plt.xlabel('Programming language')
-plt.ylabel('Respositories count')
-plt.xticks(rotation=45, ha='right')
+plt.barh(df_programming_languages['language'],df_language_count['count_per_language'],height = 0.9)
+plt.xlabel('Respositories count')
+plt.ylabel('Programming language',labelpad = 10)
 plt.savefig("Figures//programming_language.png",bbox_inches='tight')
 plt.clf()
 
@@ -364,13 +364,51 @@ df_organizations_repositories.to_csv('Output CSVs//total_number_of_repositories_
 
 repositories_per_organization = df_organizations_repositories.plot(x='Organization',y='Repositories developed',kind='bar',legend=False,figsize=(7,4))
 
-repositories_per_organization.set(title='GitHub repositories developer per organization')
 repositories_per_organization.set(xlabel='Organization')
 repositories_per_organization.set(ylabel='Repositories count')
 
 plt.xticks(rotation=90, ha='right')
 plt.savefig("Figures//repositories_per_organization.png",bbox_inches='tight')
 plt.clf()
+
+################################
+########## LIBRARIES ###########
+################################
+plt.figure(figsize=(7,4))
+df_hf_clf = pd.DataFrame(data = df_repos['hf_or_clf'].dropna())
+df_hf_clf['count_per_hl_clf'] = df_hf_clf.groupby(df_hf_clf['hf_or_clf'])['hf_or_clf'].transform('size')
+
+plt.bar(df_hf_clf['hf_or_clf'],df_hf_clf['count_per_hl_clf'])
+plt.xlabel('C and C++ library type')
+plt.ylabel('Respositories count')
+plt.savefig("Figures//hf_clf.png",bbox_inches='tight')
+plt.clf()
+
+# Libraries
+plt.figure(figsize=(10,40))
+df_library = pd.DataFrame(data = df_library_initial['libraries'].dropna())
+df_library['count_per_library'] = df_library.groupby(df_library['libraries'])['libraries'].transform('size')
+
+plt.barh(df_library['libraries'],df_library['count_per_library'])
+plt.xlabel('Respositories count')
+plt.ylabel('Library')
+plt.savefig("Figures//library.png",bbox_inches='tight')
+plt.clf()
+
+################################
+########## FRAMEWORK ###########
+################################
+plt.figure(figsize=(4,10))
+
+df_frameworks_repos = pd.DataFrame(data = df_frameworks['frameworks'])
+df_frameworks_repos['count_per_framework'] = df_frameworks_repos.groupby(df_frameworks_repos['frameworks'])['frameworks'].transform('size')
+
+plt.barh(df_frameworks_repos['frameworks'],df_frameworks_repos['count_per_framework'])
+plt.xlabel('Respositories count')
+plt.ylabel('Framework')
+plt.savefig("Figures//frameworks.png",bbox_inches='tight')
+plt.clf()
+
 
 ###################################
 ########## LICENSE TYPE ###########

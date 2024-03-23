@@ -1,0 +1,473 @@
+libraries
+
+
+
+
+
+
+
+atomic_float
+ crossbeam
+ paste
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+System
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+atomic_float
+
+
+
+sets
+ simplelog
+ sorted-vec
+
+audiopus
+ simple_logger
+ log
+ flexi_logger
+ widestring
+ hex-literal
+ enum-map
+ num_enum
+ dasp
+ anyhow
+ ringbuf
+ rand
+ variant_count
+
+stdfaust
+
+
+
+
+
+
+
+
+FFTW3
+
+
+
+
+mappings
+ 3ccaced
+
+
+
+
+
+
+assert_approx_eq
+ criterion
+ quickcheck
+ ahash
+ anyhowm arc-swap
+ array-init
+ arrayvec
+ byteorder
+ cfg-if
+ cbor4ii
+ compact_str
+ directories
+ duplicate
+ fast-math
+ fastrand
+ flate2
+ git-testament
+ indexmap
+ log
+ log-panics
+ memchr
+ once_cell
+ os_info
+ ringbuf
+ seahash
+ semver
+ serde
+ serde_json
+ simplelog
+ sleef-trig
+ vst
+ atomic_refcell
+ bytemuck
+ clap-sys
+ parking_lot
+ iced_audio
+ iced_aw
+ palette
+ rfd
+ rwh04
+ rwh05
+ tinyfiledialogs
+ iced_baseview
+ rev
+LAPACKE
+ OpenBLAS 
+ebur128
+ stdfaust
+
+
+
+
+ANN
+ dfx-library
+ fft-lib
+ vstgui
+libtensorflow
+ Intel MKL
+zlib
+ libpng
+ fftw
+ vstgui
+
+
+kissfft
+ readerwriterqueue
+WDK
+
+
+
+
+Freeverb3
+argparse
+ pathlib
+ shutil
+ subprocess
+ sys
+ tempfile
+ array-macro
+ base64
+ clipboard
+const_env
+crossbeam-channel
+crossbeam-utils
+directories
+enumflags2
+jlrs
+jlrs-derive
+julia_helper
+observatory
+owning_ref
+paste
+rand
+reqwest
+scones
+scui
+serde
+serde_json
+shared_util
+single_value_channel
+tempfile
+bincode
+ egui_extras
+ egui_glow
+ glutin
+ num
+ rand
+ serde
+ image
+ num
+ rand
+ widestring
+ log
+ simplelog
+
+
+fst
+ mtsesp
+
+
+
+
+
+DSPJIT
+
+
+
+
+
+
+
+
+
+rust-vst2
+
+femtovg
+ raw-gl-context
+ baseview
+ keyboard-types
+ raw-window-handle
+ gl
+ glutin
+ ringbuf
+
+libsndfile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+kissfft
+
+
+VST.NET
+fileinput
+ glob
+ string
+ sys
+ os
+ re
+ uuid
+ pprint
+ random
+ os
+ shutil
+ parse_config 
+Guinda
+rust-vst
+ time
+ log
+ time
+ hound
+ basic_dsp
+ serde
+ serde_derive
+ bincode
+ dsp-chain
+ lanceverb
+ vst2
+ simplelog
+ dd_dsp
+ log-panics
+ nfd
+ objc
+ cocoa
+ libc
+
+
+
+
+
+
+
+
+
+
+vst
+ rust-vst-gui
+dlib
+
+fftw
+ wave++
+util
+ build-info
+
+
+
+
+
+
+
+anyhow
+ rubato
+ parking_lot
+ crossbeam-channel
+ rost
+rust-vst
+ easyvst
+ rand
+ time
+ log
+ log-panics
+ simplelog
+ num-traits
+ asprim
+ tinyui-rs
+ app_dirs 
+
+
+
+
+
+vst
+ rand
+WDL
+ CLAP 
+
+
+
+
+
+
+
+
+
+
+
+matplotlib
+ numpy
+ pylab
+ wave
+ array
+ scipy
+JACK
+rust-vst
+ rand
+
+Grapher
+ Jacobi
+ Microsoft
+ System
+
+
+
+
+
+
+
+
+
+
+child_process
+  path
+ gulp
+ fs
+ os
+ url
+ plist
+ glob
+
+
+sfizz
+ vstgui
+ stb_image
+ GLSL-Color-Spaces
+
+
+
+
+
+
+
+
+dplug
+ synth2
+ mir
+ core
+
+
+
+
+
+
+
+
+
+
+
+egui
+ equi_glow
+ vst
+ raw-window-handle
+ image
+ baseview
+ egui-baseview
+
+
+
+
+
+vst
+
+
+
+
+audio_setup
+ buffer
+ context
+ editor
+ formatters
+ midi
+ plugin
+ prelude
+ util
+ wrapper
+ serde
+ std
+ serde_json
+
+Eigen
+
+
+awt
+ swing
+ wrapper
+ util
+
+
+
+HexoDSP
+ HexoTK
+ SynFx-DSP
+ SynFx-DSP-JIT
+enum
+ os
+ construct 
+vst
+ time
+rust-vst
+ rand
+ noise
+ karplus

@@ -1,4 +1,4 @@
-SonarQube SCP tangled 
+SQ_SCP_tangled
 No SCP tangled
 No SCP tangled
 No SCP tangled
@@ -8,62 +8,9 @@ No SCP tangled
 No SCP tangled
 Reliability E 
 No SCP tangled
-15.5% Duplications
- Reliability E
- Security Review E
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-Reliability B
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-Maintainability B
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-Reliability C
-No SCP tangled
-No SCP tangled
-Maintainability B
- Security Review E
- cppcorectguideliness violated
- performance affected negatively
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-4.6% duplications
- cppcorectguideliness violated
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-cppcorectguideliness violated
-Reliability C
- 24.0% duplications
-No SCP tangled
-No SCP tangled
-No SCP tangled
-Maintainability B
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
 Reliability E
+Security Review E
+15.5% duplications
 No SCP tangled
 No SCP tangled
 No SCP tangled
@@ -71,100 +18,160 @@ No SCP tangled
 No SCP tangled
 No SCP tangled
 No SCP tangled
-No SCP tangled
-No SCP tangled
-cppcorectguideliness violated
-No SCP tangled
-No SCP tangled
-No SCP tangled
-Reliability B
-Reliability B
-No SCP tangled
-Maintainability B
-Reliability B
-cppcorectguideliness violated
-No SCP tangled
-No SCP tangled
-No SCP tangled
+7.5% duplications
 Reliability D
- Security Review E
-No SCP tangled
-No SCP tangled
-Reliability C
-No SCP tangled
-Reliability E
- Maintainability E
-No SCP tangled
-Maintainability B
-No SCP tangled
-No SCP tangled
-Reliability D
-No SCP tangled
-cppcorectguideliness violated
- 6.3% duplications
-No SCP tangled
-No SCP tangled
-No SCP tangled
-cppcorectguideliness violated
- 13.0% duplications
-Reliability C
- Maintainability B
- Security Review E
- 1.1% duplications
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-Maintainability B
-Reliability E
- Security Review E
- 15.3% duplications
-No SCP tangled
-No SCP tangled
-Reliability C
- Security Review E
- 1.1% duplications
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-Reliability E
- Security Review E
- 1.5% duplications
-No SCP tangled
-No SCP tangled
-No SCP tangled
-Reliability B
-No SCP tangled
-No SCP tangled
-Reliability C
- Security D
- Security Review E
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-No SCP tangled
-Reliability E
- Security Review E
- 3.6% duplications
- cppcorectguideliness violated
 No SCP tangled
 No SCP tangled
 No SCP tangled
 Security Review E
- cppcorectguideliness violated
+38.8% duplications
+Reliability C
+47.4% duplications
+No SCP tangled
+Maintainability B
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+Reliability C
+No SCP tangled
+No SCP tangled
+Security Review E
+No SCP tangled
+No SCP tangled
+No SCP tangled
 No SCP tangled
 cppcorectguideliness violated
- 6.3% duplications
+4.6% duplications
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+cppcorectguideliness violated
+24.0% duplications
+Reliability C
+No SCP tangled
+No SCP tangled
+2.1% duplications
+Reliability B
+Maintainability B
+Reliability B
+Security Review E
+No SCP tangled
 No SCP tangled
 No SCP tangled
 Reliability E
- Security Review E
- 6.9% duplications
+No SCP tangled
+9.0% duplications
+Maintainability B
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+cppcorectguideliness violated
+28.5% duplications
+No SCP tangled
+Security Review E
+1.0% duplications
+Reliability E
+No SCP tangled
+Reliability B
+Reliability B
+No SCP tangled
+Maintainability B
+Reliability B
+cppcorectguideliness violated
+No SCP tangled
+No SCP tangled
+No SCP tangled
+Maintainability B
+Security Review E
+11.0% duplications
+Reliability E
+No SCP tangled
+No SCP tangled
+Reliability C
+No SCP tangled
+Maintainability E
+Reliability E
+No SCP tangled
+Maintainability B
+No SCP tangled
+No SCP tangled
+Reliability D
+No SCP tangled
+6.3% duplications
+cppcorectguideliness violated
+No SCP tangled
+No SCP tangled
+No SCP tangled
+13.0% duplications
+cppcorectguideliness violated
+Maintainability B
+Security Review E
+1.1% duplications
+Reliability C
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+Maintainability B
+Security Review E
+15.3% duplications
+Reliability E
+No SCP tangled
+No SCP tangled
+Reliability C
+Security Review E
+1.1% duplications
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+Reliability E
+Security Review E
+1.5% duplications
+No SCP tangled
+No SCP tangled
+No SCP tangled
+Reliability B
+No SCP tangled
+No SCP tangled
+Reliability C
+Security D
+Security Review E
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+No SCP tangled
+Reliability E
+Security Review E
+3.6% duplications
+cppcorectguideliness violated
+No SCP tangled
+No SCP tangled
+No SCP tangled
+Security Review E
+cppcorectguideliness violated
+No SCP tangled
+cppcorectguideliness violated
+6.3% duplications
+No SCP tangled
+Maintainability B
+Security Review E
+6.9% duplications
+Reliability E
 No SCP tangled
 Reliability C
 No SCP tangled
@@ -178,16 +185,15 @@ No SCP tangled
 No SCP tangled
 No SCP tangled
 No SCP tangled
-Maintainability B
- Security Review E
+3.0% duplications
 cppcorectguideliness violated
 No SCP tangled
 No SCP tangled
 No SCP tangled
 No SCP tangled
 No SCP tangled
+Security Review E
 Reliability D
- Security Review E
 No SCP tangled
 No SCP tangled
 No SCP tangled
@@ -207,14 +213,14 @@ cppcorectguideliness violated
 No SCP tangled
 cppcorectguideliness violated
 No SCP tangled
+9.9% duplications
 Security Review E
- 9.9% duplications
 No SCP tangled
 1.4% duplications
 No SCP tangled
+Security Review E
+0.3% duplications
 Reliability B
- Security Review E
- 0.3% duplications
 No SCP tangled
 No SCP tangled
 suspicious use of empty methods
@@ -243,8 +249,8 @@ No SCP tangled
 No SCP tangled
 No SCP tangled
 No SCP tangled
+cppcorectguideliness violated
 0.7% duplications
- cppcorectguideliness violated
 No SCP tangled
 1.6% duplications
 No SCP tangled
@@ -260,16 +266,16 @@ Maintainability B
 Reliability C
 No SCP tangled
 No SCP tangled
+1.2% duplications
 Security Review E
- 1.2% duplications
 No SCP tangled
 No SCP tangled
 No SCP tangled
 No SCP tangled
 Maintainability B
 No SCP tangled
+Security Review E
 Reliability D
- Security Review E
 No SCP tangled
 No SCP tangled
 Reliability D
@@ -283,20 +289,18 @@ No SCP tangled
 No SCP tangled
 No SCP tangled
 Reliability C
- 6.7% duplications
-No SCP tangled
+6.7% duplications
 No SCP tangled
 No SCP tangled
 No SCP tangled
 cppcorectguideliness violated
 Reliability E
- Maintainability C
- Security Review E
- Duplication 0.8% 
+Maintainability C
+Security Review E
+0.8% duplications
 No SCP tangled
 No SCP tangled
 No SCP tangled
-Quality gate passed 
 No SCP tangled
 No SCP tangled
 Reliability B
@@ -309,7 +313,7 @@ No SCP tangled
 No SCP tangled
 cppcorectguideliness violated
 Reliability E
-
+No SCP tangled
 Maintainability B
 No SCP tangled
 No SCP tangled
@@ -325,22 +329,23 @@ Maintainability B
 No SCP tangled
 Maintainability B
 No SCP tangled
+cppcorectguideliness violated
 cppcorectguideliness violated
 Reliability D
- cppcorectguideliness violated
 No SCP tangled
 No SCP tangled
 Maintainability C
+Maintainability B
+cppcorectguideliness violated
 Reliability C
- Maintainability B
- cppcorectguideliness violated
 No SCP tangled
 Security Review E
 cppcorectguideliness violated
+No SCP tangled
 No SCP tangled
 No SCP tangled
 No SCP tangled
 Realiability C
 No SCP tangled
 Reliability B
- Maintainability B
+Maintainability B

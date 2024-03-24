@@ -20,6 +20,7 @@ df_issues_content = pd.read_csv('CSVs Used//issues_content_final.csv')
 df_prs_content = pd.read_csv('CSVs Used//prs_content_final.csv')
 df_library_initial = pd.read_csv('CSVs Used//libraries_used.csv')
 df_frameworks = pd.read_csv('CSVs Used//frameworks_used.csv')
+df_scp = pd.read_csv('CSVs Used//scp_tangled.csv')
 
 # date when the data was mined 
 datetime_str = '2023-09-27'
@@ -576,3 +577,18 @@ plt.ylabel('Issues')
 plt.savefig("Figures//issue_closed_via_pr.png",bbox_inches='tight')
 plt.clf()
 
+##################################
+########## SCP TANGLED ###########
+##################################
+plt.figure(figsize=(4,11))
+
+df_scp_tangled = pd.DataFrame(data = df_scp['SQ_SCP_tangled'])
+scp = df_scp_tangled['SQ_SCP_tangled']
+df_scp_tangled['count_per_scp'] = df_scp_tangled.groupby(scp)['SQ_SCP_tangled'].transform('size')
+scp_count = df_scp_tangled['count_per_scp']
+
+plt.barh(scp,scp_count)
+plt.xlabel('Respositories count')
+plt.ylabel('Standard code practice tangled')
+plt.savefig("Figures//scp_tangled.png",bbox_inches='tight')
+plt.clf()

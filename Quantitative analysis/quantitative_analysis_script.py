@@ -21,6 +21,7 @@ df_prs_content = pd.read_csv('CSVs Used//prs_content_final.csv')
 df_library_initial = pd.read_csv('CSVs Used//libraries_used.csv')
 df_frameworks = pd.read_csv('CSVs Used//frameworks_used.csv')
 df_scp = pd.read_csv('CSVs Used//scp_tangled.csv')
+df_qg_status = pd.read_csv('CSVs Used//quality_gate_status.csv')
 
 # date when the data was mined 
 datetime_str = '2023-09-27'
@@ -591,4 +592,37 @@ plt.barh(scp,scp_count)
 plt.xlabel('Respositories count')
 plt.ylabel('Standard code practice tangled')
 plt.savefig("Figures//scp_tangled.png",bbox_inches='tight')
+plt.clf()
+
+###################################
+########## QUALITY GATE ###########
+###################################
+plt.figure(figsize=(7,4))
+
+df_qg_status['SQ_quality_gate_count'] = df_qg_status.groupby(df_qg_status['SQ_quality_gate_status'])['SQ_quality_gate_status'].transform('size')
+
+plt.bar(df_qg_status['SQ_quality_gate_status'],df_qg_status['SQ_quality_gate_count'])
+plt.xlabel('Quality gate status')
+plt.ylabel('Respositories count')
+plt.savefig("Figures//qg.png",bbox_inches='tight')
+plt.clf()
+
+###############################
+########## COMMENTS ###########
+###############################
+plt.figure(figsize=(7,4))
+
+df_comments = pd.DataFrame(data = df_repos['comments'])
+df_comments['comments_percentages'] = df_repos['comments'].str.slice(0,2)
+
+comments = sns.violinplot(data=df_comments, y=df_comments['comments_percentages'].astype(float), palette='Blues_d')
+sns.boxplot(y=df_comments['comments_percentages'].astype(float), data=df_comments, palette='Blues', width=0.3,boxprops={'zorder': 2})
+
+comments.set(xlabel='Repositories')
+comments.set(ylabel='Comments lines density (percentages)')
+comments.set(ylim = (0,77))
+comments.yaxis.set_major_formatter(mtick.PercentFormatter())
+
+comments.yaxis.set_tick_params(labelbottom=True)
+plt.savefig("Figures//comments.png",bbox_inches='tight')
 plt.clf()

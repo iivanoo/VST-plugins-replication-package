@@ -364,12 +364,11 @@ df_organizations_repositories = df_organizations['organization_name'].value_coun
 df_organizations_repositories.columns = ['Organization', 'Repositories developed']
 df_organizations_repositories.to_csv('Output CSVs//total_number_of_repositories_developed_by_organizations.csv')
 
-repositories_per_organization = df_organizations_repositories.plot(x='Organization',y='Repositories developed',kind='bar',legend=False,figsize=(7,4))
+repositories_per_organization = df_organizations_repositories.plot.barh(x='Organization',y='Repositories developed',legend=False,figsize=(4,11))
 
-repositories_per_organization.set(xlabel='Organization')
-repositories_per_organization.set(ylabel='Repositories count')
+repositories_per_organization.set(xlabel='Repositories developed count')
+repositories_per_organization.set(ylabel='Organization\'s name')
 
-plt.xticks(rotation=90, ha='right')
 plt.savefig("Figures//repositories_per_organization.png",bbox_inches='tight')
 plt.clf()
 
@@ -592,6 +591,29 @@ plt.barh(scp,scp_count)
 plt.xlabel('Respositories count')
 plt.ylabel('Standard code practice tangled')
 plt.savefig("Figures//scp_tangled.png",bbox_inches='tight')
+plt.clf()
+
+##############################
+########## TESTING ###########
+##############################
+plt.figure(figsize=(7,4))
+
+df_testing = pd.DataFrame(data = df_repos[['testing_mentioned_in_README_file','testing']])
+df_testing['count_per_README'] = df_testing.groupby(df_testing['testing_mentioned_in_README_file'])['testing_mentioned_in_README_file'].transform('size')
+df_testing['count_per_TESTING'] = df_testing.groupby(df_testing['testing'])['testing'].transform('size')
+
+
+plt.bar(df_testing['testing_mentioned_in_README_file'],df_testing['count_per_README'])
+plt.xlabel('Manual testing mentioned in README file')
+plt.ylabel('Respositories count')
+plt.savefig("Figures//testing_readme.png",bbox_inches='tight')
+plt.clf()
+
+plt.figure(figsize=(7,4))
+plt.bar(df_testing['testing'],df_testing['count_per_TESTING'])
+plt.xlabel('Software testing method')
+plt.ylabel('Respositories count')
+plt.savefig("Figures//testing.png",bbox_inches='tight')
 plt.clf()
 
 ###################################

@@ -140,30 +140,31 @@ plt.clf()
 #############################################
 ########## PROVIDED FUNCTIONALITY ###########
 #############################################
-plt.figure(figsize=(200,10))
+plt.figure(figsize=(10,150))
 
 df_provided_functionality = pd.DataFrame(data = df_repos['functionality'])
 df_provided_functionality['count_per_functionality'] = df_provided_functionality.groupby(df_repos['functionality'])['functionality'].transform('size')
-
-
 xlabels = df_provided_functionality['functionality']
 xlabels_new = [re.sub("(.{90})", "\\1\n", label, 0, re.DOTALL) for label in xlabels]
-
-plt.bar(xlabels_new,df_provided_functionality['count_per_functionality'])
-plt.xlabel('Programming language')
-plt.ylabel('Respositories count')
-plt.xticks(rotation=45, ha='right')
+plt.barh(xlabels_new,df_provided_functionality['count_per_functionality'])
+plt.xlabel('Respositories count')
+plt.ylabel('Provided functionality in-depth')
 plt.savefig("Figures//provided_functionality.png",bbox_inches='tight')
+plt.clf()
+
+# Only the first 10 results
+df_provided_functionality['functionality'].value_counts().head(10).plot(kind='barh',legend=False,figsize=(4,10))
+plt.xlabel('Respositories count')
+plt.ylabel('Provided functionality in-depth')
+plt.savefig("Figures//provided_functionality_first_results.png",bbox_inches='tight')
 plt.clf()
 
 #core functionality
 plt.figure(figsize=(7,4))
-
 df_core_provided_functionality = pd.DataFrame(data = df_repos['core_functionality'].str.strip())
 df_core_provided_functionality['count_per_functionality'] = df_core_provided_functionality.groupby(df_repos['core_functionality'])['core_functionality'].transform('size')
-
 plt.bar(df_core_provided_functionality['core_functionality'],df_core_provided_functionality['count_per_functionality'])
-plt.xlabel('Programming language')
+plt.xlabel('Provided core functionality')
 plt.ylabel('Respositories count')
 plt.savefig("Figures//core_provided_functionality.png",bbox_inches='tight')
 plt.clf()
@@ -171,21 +172,29 @@ plt.clf()
 #######################################
 ########## MEGA CONTRIBUTOR ###########
 #######################################
-plt.figure(figsize=(100,10))
+plt.figure(figsize=(10,100))
 
-df_provided_functionality = pd.DataFrame(data = df_contributors['login'])
-df_provided_functionality['count_per_contributor'] = df_provided_functionality.groupby(df_contributors['login'])['login'].transform('size')
+df_mega_contributor = pd.DataFrame(data = df_contributors['login'])
+df_mega_contributor['count_per_contributor'] = df_mega_contributor.groupby(df_mega_contributor['login'])['login'].transform('size')
 
-plt.bar(df_provided_functionality['login'],df_provided_functionality['count_per_contributor'])
-plt.xlabel('Owners and contributors GitHub usernames')
-plt.ylabel('Respositories count')
-plt.xticks(rotation=90, ha='right')
+plt.barh(df_mega_contributor['login'],df_mega_contributor['count_per_contributor'])
+plt.xlabel('Respositories count')
+plt.ylabel('Owners and contributors GitHub usernames')
 plt.savefig("Figures//mega_contributor.png",bbox_inches='tight')
 plt.clf()
 
-df_contributors_list = df_contributors.filter(['login','url'])
-df_contributors_list.drop_duplicates(subset='login', keep='first', inplace=True)
-df_contributors_list.to_csv("Output CSVs//contributors_across_repositories.csv")
+# Only the first 10 results
+df_mega_contributor['login'].value_counts().head(10).plot(kind='bar',legend=False,figsize=(7,4))
+plt.xlabel('Owners and contributors GitHub usernames')
+plt.ylabel('Respositories count')
+plt.xticks(rotation=45, ha='right')
+plt.savefig("Figures//mega_contributor_first_results.png",bbox_inches='tight')
+plt.clf()
+
+df_mega_contributor = df_contributors.filter(['login','url'])
+df_mega_contributor.drop_duplicates(subset='login', keep='first', inplace=True)
+df_mega_contributor.to_csv("Output CSVs//contributors_across_repositories.csv")
+
 
 ##################################
 ########## STARS COUNT ###########
@@ -460,6 +469,7 @@ df_age = pd.DataFrame(data = df_repos[['name','created_at','updated_at']])
 df_age['created_at'] = pd.to_datetime(df_age['created_at'].str.slice(0,10),format='%Y-%m-%d')
 df_age['updated_at'] = pd.to_datetime(df_age['updated_at'].str.slice(0,10),format='%Y-%m-%d')
 df_age['days_age'] =  (df_age['updated_at'] - df_age['created_at']).dt.days
+df_age.to_csv('Output CSVs//repositories_age.csv')
 
 age = sns.violinplot(data=df_age, y=df_age['days_age'], palette='Blues_d')
 sns.boxplot(y=df_age['days_age'], data=df_age, palette='Blues', width=0.3,boxprops={'zorder': 2})
@@ -481,9 +491,11 @@ df_freshness['pushed_at'] = pd.to_datetime(df_freshness['pushed_at'].str.slice(0
 df_freshness['today_at'] = datetime_object
 
 df_freshness['freshness_days'] =  (df_freshness['today_at'] - df_freshness['pushed_at']).dt.days
+df_freshness.to_csv('Output CSVs//repositories_freshness.csv')
 
 freshness = sns.violinplot(data=df_freshness, y=df_freshness['freshness_days'], palette='Blues_d')
 sns.boxplot(y=df_freshness['freshness_days'], data=df_freshness, palette='Blues', width=0.3,boxprops={'zorder': 2})
+
 freshness.set(ylim = (0,3700))
 freshness.set(xlabel='Repositories')
 freshness.set(ylabel='Repositories\' freshness in days')
@@ -647,4 +659,18 @@ comments.yaxis.set_major_formatter(mtick.PercentFormatter())
 
 comments.yaxis.set_tick_params(labelbottom=True)
 plt.savefig("Figures//comments.png",bbox_inches='tight')
+plt.clf()
+
+###################################
+########## BOT VS HUMAN ###########
+###################################
+plt.figure(figsize=(7,4))
+
+df_bots_vs_human = pd.DataFrame(data = df_repos['bot_vs_human_ci'].dropna())
+df_bots_vs_human['count'] = df_bots_vs_human.groupby(df_bots_vs_human['bot_vs_human_ci'])['bot_vs_human_ci'].transform('size')
+
+plt.bar(df_bots_vs_human['bot_vs_human_ci'],df_bots_vs_human['count'])
+plt.xlabel('The issue was closed by a human or bot')
+plt.ylabel('Closed issues count')
+plt.savefig("Figures//botvs_vs_human.png",bbox_inches='tight')
 plt.clf()

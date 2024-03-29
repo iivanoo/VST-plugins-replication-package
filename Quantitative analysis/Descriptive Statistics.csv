@@ -1,0 +1,18 @@
+Metric,Min.,Max.,Median,Mean,Standard Deviation,Coefficient of variation
+Size (Kb),1,647857,2095,21342.01,65732.54,3.08%
+Commits,1,4740,1,63.97,367.91,5.75%
+Forks,0,341,1,6.49,27.84,4.29%
+Open Issues,0,200,0,2.82,15.00,5.32%
+Closed Issues,0,2660,0,14.03,154.63,11.02%
+Open PRs,0,7,0,0.17,0.70,4.18%
+Closed PRs,0,4330,0,16.77,248.20,14.80%
+Time to close an issue,0,2648,1,50.37,172.95,3.43%
+Contributors,1,68,1,1.58,4.29,2.71%
+Stars,0,3847,6,84.17,362.89,4.31%
+Watchers,0,128,0,1.92,10.15,5.29%
+Cyclomatic Complexity,5,7797,188,578,991.59,1.71%
+Cognitive Complexity,3,6128,109,449,852.11,1.89%
+Comments,0.00%,62.00%,9.70%,12.43%,0.12%,0.95%
+Age,0,4356,818,996.04,881.57,0.89%
+Freshness,13,3168,431,644.87,665.27,1.03%
+Contributors GitHub profiles age (days),89,3244,514,721.82,662.74,0.92%

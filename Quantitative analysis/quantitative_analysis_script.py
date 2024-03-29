@@ -584,7 +584,7 @@ df_tied_issues['count_per_issue'] = df_tied_issues.groupby(issue_closed_type)['c
 issue_closed_type_count = df_tied_issues['count_per_issue']
 
 plt.bar(issue_closed_type,issue_closed_type_count)
-plt.xlabel(' ')
+plt.xlabel('Closed or not closed via a pull request')
 plt.ylabel('Issues')
 plt.savefig("Figures//issue_closed_via_pr.png",bbox_inches='tight')
 plt.clf()

@@ -1,5 +1,5 @@
 # Thesis-VST-replication-package
-Replication package of my thesis titled "Characterising the Development Practices of Virtual Studio Technology (VST) Plugins"<br><br>
+Replication package of my thesis entitled "Characterising the Development Practices of Virtual Studio Technology (VST) Plugins"<br><br>
 
 **Navigation:**<br>
 - **"Repositories data folder"** includes the followings:

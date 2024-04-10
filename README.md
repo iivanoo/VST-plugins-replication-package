@@ -17,5 +17,5 @@ Replication package of my thesis entitled "Characterising the Development Practi
       - *issues_final.csv from issues_count_raw.csv*.
       - *prs_final.csv from prs_count_raw.csv*.
 - **"Quantitative analysis" folder** contains the Python script that does the quantitative analysis plots which outputs them under the **"Figures" folder** and it uses the CSVs files from the **"CSVs Used" folder**.
-- **"Qualitative analysis" folder** contains the **"Codes.docx"** and **"Themes.docx"** files which represent the thematic analysis codes and themes of the repositories' issues content, alongside CSV used and figures.
+- **"Qualitative analysis" folder** contains the **"Codes.docx"** and **"Themes.docx"** files which represent the thematic analysis codes and themes of the repositories' issues content, alongside CSVs files used and output figure.
 <br><br>

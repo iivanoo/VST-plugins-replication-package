@@ -405,6 +405,15 @@ plt.ylabel('Library')
 plt.savefig("Figures//library.png",bbox_inches='tight')
 plt.clf()
 
+
+# Only the first 10 results
+df_library['libraries'].value_counts().head(10).plot(kind='barh',legend=False,figsize=(4,10))
+plt.xlabel('Respositories count')
+plt.ylabel('Library')
+plt.savefig("Figures//libraries_first_results.png",bbox_inches='tight')
+plt.clf()
+
+
 ################################
 ########## FRAMEWORK ###########
 ################################

@@ -614,6 +614,9 @@ plt.ylabel('Standard code practice tangled')
 plt.savefig("Figures//scp_tangled.png",bbox_inches='tight')
 plt.clf()
 
+df_scp_tangled.drop_duplicates(subset="SQ_SCP_tangled", keep='first', inplace=True)
+df_scp_tangled.to_csv("Output CSVs//scp_tangled_count.csv")
+
 ##############################
 ########## TESTING ###########
 ##############################

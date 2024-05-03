@@ -1,0 +1,44 @@
+,SQ_SCP_tangled,count_per_scp
+0,No SCP tangled,208
+7,Reliability E ,1
+9,Reliability E,12
+10,Security Review E,24
+11,15.5% duplications,1
+19,7.5% duplications,1
+20,Reliability D,6
+25,38.8% duplications,1
+26,Reliability C,11
+27,47.4% duplications,1
+29,Maintainability B,16
+45,cppcorectguideliness violated,22
+46,4.6% duplications,1
+53,24.0% duplications,1
+57,2.1% duplications,1
+58,Reliability B,12
+67,9.0% duplications,1
+77,28.5% duplications,1
+80,1.0% duplications,1
+94,11.0% duplications,1
+100,Maintainability E,1
+108,6.3% duplications,2
+113,13.0% duplications,1
+117,1.1% duplications,2
+127,15.3% duplications,1
+141,1.5% duplications,1
+149,Security D,1
+158,3.6% duplications,1
+171,6.9% duplications,1
+186,3.0% duplications,1
+199,2.0% duplications,1
+214,9.9% duplications,1
+217,1.4% duplications,1
+220,0.3% duplications,1
+224,suspicious use of empty methods,1
+251,0.7% duplications,1
+253,1.6% duplications,1
+258,93.1% duplications,1
+267,1.2% duplications,1
+290,6.7% duplications,1
+296,Maintainability C,3
+298,0.8% duplications,1
+346,Realiability C,1

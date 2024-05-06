@@ -557,6 +557,15 @@ issue.set(ylabel='Time in days to close an issue')
 plt.savefig("Figures//issue_close_time.png",bbox_inches='tight')
 plt.clf()
 
+df_issues_content['repository_url'] = df_issues_content['repository_url'].astype(str)
+mask_surge = (df_issues_content['created_at'].str.slice(0,10) < '2023-09-27') & (df_issues_content['closed_at'].str.slice(0,10) < '2023-09-27') & (df_issues_content['repository_url'].astype(str)=='https://api.github.com/repos/surge-synthesizer/surge')
+df_time_issue_surge = df_issues_content.loc[mask_surge]
+
+df_time_issue_surge['created_at'] = pd.to_datetime(df_time_issue_surge['created_at'].str.slice(0,10),format='%Y-%m-%d')
+df_time_issue_surge['closed_at'] = pd.to_datetime(df_time_issue_surge['closed_at'].str.slice(0,10),format='%Y-%m-%d')
+df_time_issue_surge['days_age'] =  (df_time_issue_surge['closed_at'] - df_time_issue_surge['created_at']).dt.days
+df_time_issue_surge.to_csv('Output CSVs//Issues_content_until_27.09.2023_Surge.csv')
+
 #########################################
 ########## TIME TO CLOSE A PR ###########
 #########################################

@@ -1,0 +1,300 @@
+full_name,programming_languages
+klknn/kdr,"['D', 'Python', 'Starlark', 'Shell']"
+hansen-audio/renegate-fx,"['CMake', 'C++', 'C']"
+Wasted-Audio/wstd-eq,['C++']
+AnClark/Minaton-XT,"['CMake', 'C', 'C++', 'Makefile', 'Python']"
+xivilay/scale-remapper,"['CMake', 'Batchfile', 'C++', 'Shell']"
+StoneyDSP/Biquads,"['C++', 'CMake', 'Objective-C++', 'C']"
+patriceguyot/ComposeSiren,"['C++', 'C', 'Objective-C++', 'R']"
+azur1s/penare,"['PowerShell', 'Rust', 'CSS']"
+eulmour/HandyOsc,"['C++', 'C', 'CMake']"
+psemiletov/drumlabooh,"['C++', 'CMake', 'C', 'NSIS']"
+thezhe/D-lay,"['C', 'C++', 'Objective-C++', 'R']"
+OlliV/DiaPro,"['CMake', 'C++', 'C', 'Shell']"
+njazz/cloudseed-juce,"['CMake', 'C++', 'C', 'Objective-C++', 'R']"
+xivilay/chord-recognition,"['CMake', 'C++', 'Batchfile']"
+SimonZimmer/SEELE,"['CMake', 'C++']"
+wolf-tickets/sound-and-outer-space,"['CMake', 'Makefile', 'C', 'C++', 'Objective-C++', 'R', 'Objective-C', 'Java']"
+gregormcw/elev8,['C++']
+MeijisIrlnd/Transfer,"['C', 'C++', 'Objective-C++', 'CMake']"
+johanLsp/Milion,"['C', 'C++', 'CMake', 'Objective-C++']"
+essenbee/multifilter,"['C', 'C++', 'Objective-C++', 'R']"
+mariusz96/blue-synthesiser,['C++']
+waddafunk/Oscilloscope,"['C++', 'Makefile', 'C']"
+Juanmalopezg/smooth-distortion,"['C++', 'CMake']"
+pongasoft/jamba-sample-gain,"['CMake', 'C++', 'C', 'Python']"
+midilab/jc303,"['CMake', 'C++', 'C']"
+sainsay/AudioPlugins,"['CMake', 'C++']"
+TheAvalanche/JustAudioFX,['C++']
+xuan25/RXG100-RE,"['C#', 'Batchfile']"
+KevinToodlepoot/MS-Exciter,"['C++', 'C']"
+caleqw2/ParticleArtsPlugin,['C++']
+vihdzp/colimiter,['Rust']
+dmultiply/Klide,"['C++', 'Rich Text Format']"
+KaiDrange/ECMapper,"['C++', 'C', 'CMake', 'Shell']"
+pongasoft/vst-ab-switch,"['CMake', 'C++', 'Python', 'C']"
+bartoszOsn/FuzzTeeth,['C++']
+Dimethoxy/Plasma,"['C++', 'C', 'Inno Setup', 'Shell']"
+pongasoft/vst-vac-6v,"['CMake', 'Groovy', 'C++', 'C', 'Python']"
+DoomyDwyer/ASPiKProjects,"['CMake', 'C++', 'C', 'Objective-C', 'Objective-C++', 'Batchfile', 'Shell']"
+Do-sth-sharp/libDMDA,"['C++', 'C']"
+polimi-ispl/ebeamer,"['C', 'C++', 'Objective-C++', 'R', 'CMake']"
+reillypascal/RSAlgorithmicVerb,['C++']
+p-o-l-e/spiro,"['Makefile', 'C++', 'C', 'Objective-C++', 'Java', 'CMake', 'Python', 'Objective-C']"
+JoergBitzer/JadeSpectrogram,"['CMake', 'C', 'C++']"
+MichaelBokatius/BlissBox,['C++']
+FilipeChagasDev/FClipper-plugin,"['C++', 'C', 'Objective-C++', 'R']"
+adammurdocknh/YAMS,['C++']
+RickBn/reDroidFlux,['C++']
+reillypascal/RSBrokenMedia,"['C++', 'C']"
+mpusch88/Externalizer,['C++']
+varlen/randstepfilter,"['C++', 'C', 'Makefile', 'Inno Setup', 'Rich Text Format', 'TeX', 'Objective-C', 'Python', 'Shell', 'Batchfile']"
+Emmet-Hayes/HayesPlugins,"['C++', 'Python', 'Inno Setup', 'C', 'Objective-C++']"
+hansen-audio/gain-automation-plugin,"['CMake', 'C++', 'C']"
+Speechrezz/VibratoPlugin,['C++']
+pardinensis/useless_reverb,"['C++', 'C', 'Objective-C++', 'R']"
+sharki13/stereoknob,['C++']
+samuelebh/Magic-Chorus,"['C', 'C++', 'Objective-C++', 'R']"
+hsetlik/Octane,"['C++', 'C', 'GLSL', 'Ruby', 'CMake']"
+p4thie/esc,"['Rust', 'CSS']"
+theuser27/Complex,"['C', 'C++', 'Objective-C++', 'CMake', 'Makefile', 'Batchfile', 'Python', 'Java', 'Objective-C']"
+ashokfernandez/DR-Filter,"['C++', 'Shell', 'C']"
+ptablas/M-S-Echottage,['C++']
+rochen-sound-collective/modular_collection,"['Rust', 'Shell']"
+silver-yar/ap_sampler,['C++']
+toasty-ghost/ASE_KM_Caverb,"['CMake', 'C++', 'C', 'Objective-C', 'Objective-C++', 'Batchfile']"
+tparker48/sherpa-synthesizer,"['C++', 'C']"
+astra137/opus-parvulum,"['PowerShell', 'Rust']"
+rklogan/Combiner,['C++']
+suzumushi0/AudioQAM_source,"['CMake', 'C++', 'C']"
+hx-ux/Bitcrushi,"['C++', 'C', 'Makefile', 'Inno Setup', 'Rich Text Format', 'TeX', 'Objective-C', 'Python', 'Shell', 'Batchfile']"
+michael-truscott/DoomVst,"['C++', 'C']"
+ChaseDurand/simple-plugin-gui,"['CMake', 'C++', 'C']"
+JacobACan/RGBA-Synth,['C++']
+ReplicatAudio/TerminalVelocity,['C++']
+StunnedByMusic/LatencySpy,"['C', 'C++']"
+likelian/Repeator,['C++']
+dragonsploder/Dynamo,['C++']
+LensPlaysGames/Gainbit,['C++']
+Djaugo/EQ_Lite-Vst-Plugin-Win,['C++']
+tgalpha/ActivityTimer,"['C++', 'C', 'Objective-C++', 'R', 'Java', 'CMake', 'Python', 'Objective-C']"
+Mg32/SymmetricPingPongDelay,['Faust']
+Husenap/VSTakoyaki,"['CMake', 'C++', 'C', 'Shell']"
+flafflar/FaderVST,"['C++', 'CMake']"
+alxtim10/AngklungBeats,['C++']
+Speechrezz/SaturatorTest,"['C++', 'C']"
+AnClark/synthv1-universal,"['CMake', 'C', 'C++']"
+mmomentum/dopplerjuce,"['C++', 'C', 'Objective-C++', 'Objective-C']"
+essenbee/delay,"['C', 'C++', 'Objective-C++', 'R']"
+Cyril-Meyer/BitDepthReducer,['C++']
+AnClark/padthv1-universal,"['CMake', 'C', 'C++']"
+Leonidius20/MegaSynth,"['C++', 'C', 'Makefile', 'Inno Setup', 'Rich Text Format', 'TeX', 'Objective-C', 'Python', 'Shell', 'Batchfile']"
+sadmemelord/QuasoCompressor,"['C++', 'C', 'Objective-C++', 'R']"
+werckme/werckmeister-vst,"['CMake', 'C++', 'Rich Text Format', 'CSS', 'HTML', 'C', 'R']"
+HabzdaBalint/VST_Synth,"['C++', 'C', 'Objective-C++']"
+insomnimus/drum-mapper,"['Rust', 'Shell']"
+rijadhubana/RSynth-v1,['C++']
+emanuelemessina/ReaShader,[]
+GiorgosKoulouris/DeCoderPlugin,"['CMake', 'Makefile', 'Batchfile', 'Python', 'C++', 'Objective-C++', 'C', 'Java', 'R', 'Objective-C']"
+asb2m10/dexed,"['Shell', 'C++', 'C', 'Inno Setup', 'CMake']"
+michaelwillis/dragonfly-reverb,"['Makefile', 'C++', 'C', 'Shell']"
+monadgroup/axiom,"['CMake', 'C++', 'C', 'Rust', 'Shell']"
+DamRsn/NeuralNote,"['CMake', 'C++', 'C', 'Python', 'Batchfile', 'Shell']"
+greatest-ape/OctaSine,"['Rust', 'Shell', 'Handlebars']"
+leomccormack/SPARTA,"['C++', 'Shell', 'Batchfile', 'CMake', 'C']"
+trummerschlunk/master_me,"['Faust', 'Jupyter Notebook', 'Makefile', 'C', 'C++', 'Shell']"
+amsynth/amsynth,"['Shell', 'C++', 'C', 'Makefile', 'M4', 'Inno Setup', 'Batchfile']"
+jpcima/ADLplug,"['CMake', 'C', 'C++', 'Objective-C++', 'R', 'Makefile', 'Shell']"
+ffAudio/Frequalizer,"['C++', 'CMake', 'Inno Setup']"
+zamaudio/zam-plugins,"['Makefile', 'C++', 'C', 'MATLAB', 'POV-Ray SDL']"
+wolf-plugins/wolf-shaper,"['Makefile', 'C++', 'C', 'HTML', 'Shell', 'CMake']"
+sophiapoirier/destroyfx,"['C++', 'C', 'Objective-C', 'Makefile', 'Batchfile', 'Objective-C++', 'Shell', 'HTML', 'JavaScript', 'CSS']"
+james34602/SpleeterRT,"['C', 'C++', 'Objective-C++', 'R']"
+dozius/DtBlkFx,"['C++', 'C', 'Fortran', 'Scilab', 'Perl', 'MATLAB', 'Objective-C']"
+p-hlp/CTAGDRC,['C++']
+artfwo/andes,"['C++', 'Makefile', 'C', 'Objective-C++', 'R']"
+wolf-plugins/wolf-spectrum,"['Makefile', 'C++', 'C', 'CMake', 'Shell']"
+seven-phases/spectrum-analyzer,"['Batchfile', 'C++', 'C', 'HTML', 'Makefile']"
+igorski/fogpad,"['CMake', 'C', 'Batchfile', 'Shell', 'C++']"
+apohl79/GuitarAmp,"['C++', 'C', 'Objective-C++', 'Shell', 'Python', 'Inno Setup', 'Batchfile']"
+szkkng/simple-reverb,"['CMake', 'C++']"
+igorski/regrader,"['CMake', 'Batchfile', 'Shell', 'C++', 'C']"
+cvde/RoomReverb,"['CMake', 'C++', 'C']"
+joshua-maros/audiobench,"['Rust', 'CMake', 'Python', 'C++', 'C', 'Julia', 'Shell', 'HTML', 'NSIS']"
+t-sin/soyboy-sp.vst3,"['Rust', 'Shell', 'PowerShell', 'Common Lisp']"
+Iunusov/ShoutVST,"['Batchfile', 'CMake', 'C++', 'C']"
+igorski/VSTSID,"['CMake', 'C++', 'Shell', 'C', 'Batchfile']"
+attilammagyar/js80p,"['Makefile', 'Batchfile', 'HTML', 'C', 'Python', 'Shell', 'C++', 'CMake', 'Objective-C++', 'Objective-C', 'R', 'PowerShell', 'Smarty']"
+kushview/roboverb,"['C++', 'Meson']"
+Archie3d/aeolus_plugin,"['C++', 'C', 'CMake', 'Python']"
+QVbDev/quantumVerb,"['C', 'C++', 'Objective-C++', 'R', 'CSS']"
+reales/OB-Xd,"['C++', 'Objective-C++', 'C']"
+MikeMorenoDSP/EP-MK1,['Shell']
+trackbout/ripchord,"['C++', 'C']"
+aliefhooghe/Gammou,"['C++', 'C', 'CMake', 'Python']"
+usdivad/Melodrumatic,"['C', 'C++', 'Objective-C++', 'R', 'C#']"
+qbroquetas/IV-XDelay,"['Makefile', 'C', 'C++', 'Objective-C++', 'R', 'Objective-C', 'Java', 'Pascal']"
+xunil-cloud/CloudReverb,"['CMake', 'C++', 'C']"
+Mrugalla/NEL-19,['C++']
+martinic/DrMixAISynth,"['C++', 'Makefile', 'Batchfile', 'Shell', 'C']"
+vroomai/vst,['C++']
+Iunusov/LameVST,"['Batchfile', 'CMake', 'C++', 'C']"
+Squishy47/OpenVerb,['C++']
+DBraun/TD-JUCE,"['CMake', 'C', 'C++', 'Objective-C++']"
+17cupsofcoffee/digidist,['Rust']
+swesterfeld/spectmorph,"['Makefile', 'Shell', 'C++', 'M4', 'Python', 'C', 'Objective-C', 'Objective-C++', 'Dockerfile', 'Rich Text Format']"
+WeirdConstructor/Kickmess,"['Shell', 'Rust']"
+pongasoft/vst-sam-spl-64,"['CMake', 'C', 'Shell', 'C++', 'CSS', 'Groovy', 'Python']"
+SpotlightKid/ykchorus,"['Makefile', 'C++', 'C', 'Shell']"
+igorski/transformant,"['CMake', 'C', 'Batchfile', 'Shell', 'C++']"
+igorski/homecorrupter,"['CMake', 'C', 'Batchfile', 'Shell', 'JavaScript', 'C++']"
+datajake1999/OPL3GM_VSTi,"['C++', 'C', 'Batchfile', 'Inno Setup']"
+unevens/Curvessor,"['C', 'C++']"
+nimbletools/misstortion1,['C++']
+linuxmao-org/VL1-emulator,"['C++', 'Objective-C', 'C', 'Makefile', 'Emacs Lisp', 'Shell']"
+retornz/ToneZ,"['Inno Setup', 'Csound Document']"
+abbysoft-team/Soompler,['C++']
+utokusa/BiquadLimiter,"['C', 'C++', 'Objective-C++', 'R']"
+shaduzlabs/throb,"['CMake', 'C++', 'Objective-C++']"
+morukutsu/LondonClockT,"['C', 'C++', 'Objective-C++', 'R']"
+igorski/darvaza,"['CMake', 'C', 'Batchfile', 'Shell', 'JavaScript', 'C++']"
+SoundDevelopment/sound_meter,"['C++', 'C']"
+FigBug/VirtualAnalog,"['C++', 'Shell']"
+planaria/vv,['C++']
+sdeleon28/IgnitionGuitarAmp,"['C++', 'C', 'Objective-C++', 'R', 'Shell', 'Python']"
+SpotlightKid/midiomatic,"['Makefile', 'C', 'C++', 'Shell']"
+LeifBloomquist/MIDIMapperX,"['C#', 'Inno Setup']"
+olilarkin/iPlug2OnnxRuntime,"['Dockerfile', 'C++', 'C', 'Makefile', 'Inno Setup', 'Rich Text Format', 'TeX', 'Objective-C', 'Shell', 'Batchfile', 'Python']"
+lucianoiam/castello,"['Makefile', 'C++', 'C', 'JavaScript', 'HTML', 'CSS', 'Shell']"
+monomadic/dd-plugs,"['Rust', 'Shell']"
+ddf/SpectralHarp,"['C++', 'C', 'JavaScript', 'CSS', 'Objective-C++', 'Inno Setup', 'Shell', 'Batchfile', 'Python', 'HTML']"
+sunquan8094/overtonix,['C++']
+ddf/evaluator,"['C++', 'Objective-C++', 'C', 'Inno Setup', 'Shell', 'Batchfile', 'Python', 'Rich Text Format']"
+leomccormack/CroPaC-Binaural,"['C', 'C++', 'Batchfile', 'CMake']"
+igorski/rechoir,"['CMake', 'C', 'Batchfile', 'Shell', 'C++', 'JavaScript']"
+YPares/arpligner,"['Lua', 'Makefile', 'C++', 'C', 'Objective-C++', 'Java', 'CMake', 'Objective-C', 'Python']"
+AlexW00/clockwork,['Rust']
+unevens/Overdraw,"['C', 'C++']"
+VirtualRaven/KandVST,"['CMake', 'C++', 'C', 'MATLAB', 'Python']"
+lukemcraig/OvertoneFilter,"['C++', 'C']"
+fake-industries/fuzzball,['Rust']
+lukemcraig/PathSynth,['C++']
+hotwatermorning/wahwth,"['C++', 'C', 'CMake', 'Batchfile', 'PowerShell', 'Shell']"
+LibreArp/LibreArp,"['CMake', 'Shell', 'C++', 'C']"
+JohT/speclet,"['CMake', 'C++', 'C', 'Makefile']"
+valsteen/note_effects_vst,"['Rust', 'Shell']"
+p-hlp/SMPLComp,['C++']
+davemollen/dm-GrainDelay,"['Rust', 'Shell', 'HTML', 'CSS']"
+vertver/Dynation,"['CMake', 'C++', 'C']"
+JamesStubbsEng/TS-808-Ultra,['C++']
+nberr/jackel,"['C++', 'C', 'Objective-C++', 'R']"
+BLumia/PineappleSynth,"['C++', 'C', 'Objective-C++', 'Inno Setup', 'Shell', 'Batchfile', 'Python']"
+canokaue/azr3-mac,"['Makefile', 'CMake', 'C++', 'Objective-C++', 'Objective-C', 'CSS', 'C', 'Perl', 'Ruby', 'Shell', 'Batchfile', 'R']"
+publicsamples/Peach,['JavaScript']
+gamingrobot/daw-out,"['Rust', 'CSS']"
+jcfischer/easylooper,"['Shell', 'Rust']"
+POTR-Soft/Chord-Filter,"['CMake', 'C++']"
+david6983/saxaboom,"['C++', 'Inno Setup']"
+TobiasKozel/transmitter,"['C++', 'C', 'Makefile', 'Inno Setup', 'Rich Text Format', 'TeX', 'Objective-C', 'Python', 'Shell', 'Batchfile', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SCSS']"
+davemollen/dm-Reverse,"['HTML', 'CSS', 'Rust', 'Shell']"
+00laboratories/HISE-AG-20,['JavaScript']
+imchristina/piano,"['Rust', 'Lua']"
+jthorborg/signalizer,"['Makefile', 'C', 'C++', 'Objective-C++', 'R', 'Java', 'Objective-C', 'Python', 'Batchfile', 'Rez']"
+TaleTN/IPlugExample,"['C++', 'Makefile', 'Batchfile', 'Shell', 'C']"
+TheTechnobear/SSP,"['C++', 'C', 'Shell', 'Python', 'CMake']"
+DropSnorz/wobbleizer,"['C++', 'C', 'Objective-C++', 'Inno Setup', 'Shell', 'Batchfile', 'Python']"
+safiire/kitty_synth_vst,"['Ruby', 'Shell', 'Python', 'C', 'C++']"
+vocalodon/VocalodonVST,"['C++', 'Objective-C++', 'R', 'HTML']"
+Flixor/IRBaboon,"['C++', 'C', 'Objective-C++', 'R']"
+HarrisonBubbles/OasisAudioPlugin,['C++']
+KottV/SimpleSide,['C++']
+lukemcraig/farkle,"['C', 'C++', 'Objective-C++', 'R']"
+rickgiantsteps/bucket-brigade,"['C++', 'C', 'Objective-C++', 'R']"
+Uberton/Uberton,"['CMake', 'C++', 'C']"
+ChromaticIsobar/HyperTremolo,"['C++', 'Shell', 'C', 'Python']"
+sunquan8094/Krush3x,['C++']
+sabeiro/McAmp,"['Processing', 'C++', 'C', 'Assembly', 'Objective-C', 'Python', 'CMake']"
+osam-cologne/stereogain,"['Makefile', 'C++', 'C', 'Shell']"
+EmilianStankov/rvst,['Rust']
+krmnn/MIDIVelocityZone,"['C++', 'CMake']"
+johncollinson2001/multifuzz,"['C++', 'C', 'Objective-C++', 'Inno Setup']"
+RBLG/Grapher,['C#']
+rm8x/myowah,"['C', 'C++', 'Objective-C++', 'R']"
+morukutsu/ParisHarmony,"['C', 'C++', 'Objective-C++']"
+wolf-plugins/wolf-lfo,"['Makefile', 'Shell', 'C++', 'C', 'HTML']"
+miladnia/KeysVST,"['JavaScript', 'CSS']"
+surge-synthesizer/surge,"['Shell', 'Inno Setup', 'C', 'C++', 'PowerShell', 'Python', 'CMake', 'Perl', 'Jupyter Notebook', 'Lua', 'HTML', 'Dockerfile', 'Objective-C++', 'Batchfile']"
+jatinchowdhury18/AnalogTapeModel,"['TeX', 'Python', 'C++', 'Inno Setup', 'Shell', 'Makefile', 'CMake']"
+Chowdhury-DSP/ChowMatrix,"['CMake', 'C++', 'Shell', 'TeX', 'Makefile', 'Inno Setup', 'C']"
+vvvar/PeakEater,"['C++', 'CMake', 'Python', 'Ruby', 'Just', 'Dockerfile', 'Jinja']"
+JanosGit/Schrammel_OJD,"['CMake', 'Inno Setup', 'C++']"
+utokusa/OS-251,"['C++', 'CMake', 'JavaScript', 'Shell', 'TypeScript', 'Inno Setup', 'Makefile']"
+hollance/mda-plugins-juce,"['C++', 'C']"
+tobanteAudio/modEQ,"['C++', 'Makefile', 'CMake']"
+khrykin/BlackBird,"['Inno Setup', 'Shell', 'Batchfile', 'C++', 'CMake']"
+vgorloff/VST3NetSend,"['C++', 'Objective-C', 'Objective-C++', 'C', 'Swift', 'Shell', 'JavaScript']"
+szkkng/jr-granular,"['CMake', 'Max', 'C++', 'C']"
+robbert-vdh/diopser,"['CMake', 'C++']"
+SmEgDm/equalize_it,"['CMake', 'C++', 'Inno Setup']"
+prof-spock/SoX-Plugins,"['CMake', 'C', 'C++', 'Batchfile', 'Shell']"
+stfufane/Midi-Transposer,"['C++', 'CMake']"
+blackboxdsp/rotor,"['C++', 'CMake', 'Shell']"
+elk-audio/mda-vst3,"['CMake', 'C', 'C++']"
+fukuroder/BLIT-based_sinewave_hardsync,"['C++', 'Python', 'CMake']"
+blackboxdsp/phantom,"['CMake', 'C++', 'Shell']"
+sfztools/sfizz-ui,"['CMake', 'C++', 'Objective-C++', 'C', 'Shell', 'Python']"
+werman/noise-suppression-for-voice,"['CMake', 'C++', 'C']"
+DISTRHO/Cardinal,"['Makefile', 'C++', 'C', 'Shell', 'HTML', 'JavaScript', 'CSS', 'Inno Setup', 'PHP']"
+jerryuhoo/Fire,"['C', 'C++', 'CMake', 'Ruby', 'Inno Setup']"
+hzdgopher/4klang,"['Assembly', 'C++', 'C', 'Batchfile', 'Shell', 'CMake', 'Makefile']"
+mzuther/Squeezer,"['Makefile', 'Python', 'Shell', 'Lua', 'C', 'C++', 'R', 'Batchfile', 'Objective-C++']"
+mzuther/K-Meter,"['Makefile', 'Python', 'Shell', 'Lua', 'C', 'C++', 'R', 'Batchfile', 'Objective-C++']"
+Chowdhury-DSP/CHOW,"['C++', 'Inno Setup', 'C', 'Objective-C++', 'R']"
+s-oram/Grace,"['Batchfile', 'Pascal', 'PHP', 'C++', 'Assembly', 'Shell', 'HTML', 'CSS', 'C', 'Makefile', 'NSIS', 'JavaScript', 'AutoIt', 'Inno Setup', 'Pawn']"
+TobiasKozel/GuitarD,"['C', 'Makefile', 'C++', 'Inno Setup', 'Rich Text Format', 'TeX', 'Objective-C', 'Python', 'Shell', 'Batchfile', 'Faust']"
+jpcima/string-machine,"['Makefile', 'C', 'C++', 'Shell', 'SourcePawn', 'Faust', 'CMake']"
+jpcima/HybridReverb2,"['CMake', 'C', 'C++', 'Objective-C++', 'R', 'Shell', 'Makefile', 'Roff']"
+klknn/synth2,"['D', 'Python']"
+mzuther/traKmeter,"['Shell', 'Python', 'Makefile', 'Lua', 'Batchfile', 'C', 'C++', 'Objective-C++', 'R']"
+KaixoCode/CMBNEX,"['CMake', 'C++']"
+leomccormack/HO-SIRR-GUI,"['C', 'C++', 'Batchfile', 'CMake']"
+SpotlightKid/dfzitarev1,"['Makefile', 'C++', 'Faust', 'C', 'Shell']"
+SpotlightKid/stereocrossdelay,"['Makefile', 'C++', 'Faust', 'C', 'Shell']"
+killbizz/Biztortion,"['C++', 'C', 'Objective-C++', 'R']"
+SpotlightKid/sendmixer,"['Makefile', 'C++', 'Faust', 'C', 'Shell']"
+lukemcraig/MusicalRingMod,"['C', 'C++', 'Objective-C++', 'R']"
+ABSounds/Harpejji-VST,"['C++', 'C', 'Objective-C++', 'R']"
+SpotlightKid/transportgate,"['Makefile', 'C++', 'C']"
+kcuric/kodiak,"['C', 'C++', 'Objective-C++', 'R']"
+YeshiNamkhai/mioSynth,"['Csound Document', 'HTML']"
+WrongPeople/JustRepeat,"['CMake', 'C++']"
+almostdefinitelycode/DCOffsetter,"['CMake', 'C++', 'C']"
+GrieferPig/zippify,['Rust']
+maxklint/patch-discord,['Csound Document']
+johnfmcrae/NoiseGenerator,['C++']
+TobiasKozel/rektifier,"['C', 'Makefile', 'Rich Text Format', 'Inno Setup', 'TeX', 'C++', 'Objective-C', 'Python', 'Shell', 'Batchfile']"
+ntomassetti/DesuMateVST,['C++']
+Janislav/Pluto,"['C', 'C++', 'Objective-C++', 'R']"
+alexyer/digidist,['Rust']
+chrigervi/Orpheus,['C++']
+blaketeres/Boomerang-Delay-Plugin-VST-AU-,['C++']
+uchidama/SimpleSynthEx,['C++']
+uchidama/WhiteNoiseSynthPluginEx,['C++']
+hectorbennett/hecto-drive,"['TypeScript', 'HTML', 'CSS', 'Rust']"
+Kareus/ABit,"['C++', 'C']"
+notwa/crap,"['C++', 'Shell', 'Makefile']"
+JosephTLyons/Track-Notes-1,['C++']
+konstice/SignatureLine,"['C++', 'C', 'Objective-C++', 'R']"
+defrankland/VstAudioEqMeter,['Java']
+brayschurman/venue,[]
+Lolitron-0/Kaoss-emul,['C++']
+crowbait/GnomeDistort,"['C++', 'C']"
+haszari/PhraseSyncPlugins,['C++']
+scriptorum/SMBigSkin,['JavaScript']
+dsp-re/suzirya,['C++']
+WeirdConstructor/HexoSynth,"['Rust', 'Shell']"
+demberto/fxp,['Python']
+defuse/vst_plugin,['Rust']
+tomto66/Topiary-Riffz,"['C', 'C++', 'Batchfile']"
+strikles/UQLRF-500,"['Rust', 'Shell']"
+pfeeyatko/simple-eq,['C++']

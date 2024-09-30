@@ -521,7 +521,7 @@ df_users_age = pd.DataFrame(data = df_users[['login','created_at']])
 df_users_age['created_at'] = pd.to_datetime(df_users_age['created_at'].str.slice(0,10),format='%Y-%m-%d')
 df_users_age['today_at'] = datetime_object
 
-df_users_age['age_in_days'] =  (df_freshness['today_at'] - df_freshness['pushed_at']).dt.days
+df_users_age['age_in_days'] =  (df_users_age['today_at'] - df_users_age['created_at']).dt.days
 #user_age = df_users_age.plot(x='login',y='age_in_days',kind='bar',legend=False,figsize=(100,10))
 
 user_age = sns.violinplot(data=df_users_age, y=df_users_age['age_in_days'], palette='Blues_d')

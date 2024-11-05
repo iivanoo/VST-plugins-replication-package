@@ -682,16 +682,3 @@ comments.yaxis.set_tick_params(labelbottom=True)
 plt.savefig("Figures//comments.png",bbox_inches='tight')
 plt.clf()
 
-###################################
-########## BOT VS HUMAN ###########
-###################################
-plt.figure(figsize=(7,4))
-
-df_bots_vs_human = pd.DataFrame(data = df_repos['bot_vs_human_ci'].dropna())
-df_bots_vs_human['count'] = df_bots_vs_human.groupby(df_bots_vs_human['bot_vs_human_ci'])['bot_vs_human_ci'].transform('size')
-
-plt.bar(df_bots_vs_human['bot_vs_human_ci'],df_bots_vs_human['count'])
-plt.xlabel('The issue was closed by a human or bot')
-plt.ylabel('Closed issues count')
-plt.savefig("Figures//botvs_vs_human.png",bbox_inches='tight')
-plt.clf()

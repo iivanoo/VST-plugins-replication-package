@@ -1,21 +1,55 @@
-# Thesis-VST-replication-package
-Replication package of my thesis entitled "Characterising the Development Practices of Virtual Studio Technology (VST) Plugins"<br><br>
+VST Plugins – Replication package
 
-**Navigation:**<br>
-- **"Repositories data folder"** includes the followings:
-  - **"repo_demographic_mined_data" folder** contains the JSONs with all the query results, basically everything that the GET Requests from the script mined.
-  - **"repo_final_mined_data" folder** contains all JSONs from "repo_demographic_mined_data" but merged, the names of the files are suggestive and self-explanatory for what was merged inside that file.
-    - **"raw_csv" folder** contains all JSONs from "repo_demographic_mined_data" but merged and converted to CSV format, the names of the files are suggestive and self-explanatory for what was merged inside that file.
-    - **"raw_uncurated_csv" folder** contains as CSVs the following JSONs:
-        - *final_data_uncurated.csv = all mined data gathered, merged by GitHub Repository URL, and in one single CSV file, with duplicates*. 
-        - *contributors_and_commits_count_raw.csv =  mined_repo_contributors_count.json + mined_repo_commits_count.json*.
-        - *issues_count_raw.csv = mined_repo_issues_count_closed.json + mined_repo_issues_count_opened.json*.
-        - *prs_count_raw.csv = mined_repo_prs_count_closed.json + mined_repo_prs_count_opened.json*.
-    - **"curated_csv" folder** contains all CSVs from the *raw_uncurated_csv* folder but without duplicates and only the fields of interest and the final CSV for the final data frame:
-      - *final_data_curated.csv = final dataframe*.
-      - *in_depth_selected_details.csv - from mined_repo_in_depth_details.json*.
-      - *issues_final.csv from issues_count_raw.csv*.
-      - *prs_final.csv from prs_count_raw.csv*.
-- **"Quantitative analysis" folder** contains the Python script that does the quantitative analysis plots which outputs them under the **"Figures" folder** and it uses the CSVs files from the **"CSVs Used" folder**.
-- **"Qualitative analysis" folder** contains the **"Codes.docx"** and **"Themes.docx"** files which represent the thematic analysis codes and themes of the repositories' issues content, alongside CSVs files used and output figure.
-<br><br>
+Overview of the replication package
+This replication package is structured as follows:
+
+    |--- Qualitative analysis/          The data extracted during the qualitative analysis.
+    |--- Quantitative analysis/         The scripts utilized and the data extracted during the quantitative analysis.
+    |--- Repositories data/   	    The scripts utilized and the data extracted during the mining process of VST Plugins repositories on GitHub.
+
+    
+Each of the folders listed above are described in details in the remaining of this readme.
+
+Qualitative analysis
+
+    |--- CSVs Used         Two CSV files: the first one represents the content of issues, and the second one represents the developed themes and codes for qualitative analysis.   
+    |--- Figures           The figure that depicts as a radar plot the distribution of themes and codes among repositories issues.
+    |--- Codes.docx        The document that was utilized for categorizing the issues' contents by codes.
+    |--- Themes.docx       The document that was utilized for grouping the codes by themes.    
+
+
+Quantitative analysis
+
+    |--- CSVs Used                                     Contains the CSVs files utilized for quantitative analysis.   
+    |--- Figures                                       Contains the figures outputted from the "quantitative_analysis_script.py" Python script.
+    |--- Output CSVs                                   Contains additional CSVs files outputted from the "quantitative_analysis_script.py" Python script, that were utilized at a later stage for this study.
+    |--- Descriptive Statistics.csv                    The descriptive statistics of the mined repositories.
+    |--- rq1.ipynb                                     The Jupyter Notebook in Python utilized for generating the plots and the descriptive statistics that are required for answering RQ1.
+    |--- rq2.ipynb                                     The Jupyter Notebook in Python utilized for generating the plots and the descriptive statistics that are required for answering RQ2.
+    |--- rq3.ipynb                                     The Jupyter Notebook in Python utilized for generating the plots and the descriptive statistics that are required for answering RQ3.
+
+
+Repositories data
+  
+	|--- Cloned repositories                   Contains the SonarQube reports alongside the Python script responsible for cloning the repositories mentioned in the CSVs Used subfolder. 
+        |--- CSVs Used                       Contains the final repositories dataset as a CSV file, which was utilized only for the sole purpose of gathering the repositories' names by the "mine_repo_data.py" Python script.
+        |--- SonarQube reports               Contains the SonarQube compressed reports of all repositories. 
+        |--- mine_repo_data.py               The Python script responsible for cloning the repositories
+	|--- repo_final_mined_data               Contains the original repositories demographic data, after applying the inclusion and exclusion protocol.
+        |--- contributors                    Contains the details about each contributor.
+        |--- curated_csv                     Contains the final CSVs files utilized for the quantitative analysis.
+        |--- issue                           Contains the issue's contents per repositories.
+        |--- languages                       Contains all the programming languages utilized across repositories, not just the primary one.
+        |--- raw_csv                         Contains the merged JSON files as CSV files. Those CSV files also contain out-of-scope fields but without duplicates.
+        |--- raw_uncurated_csv               Contains the merged JSON files as CSV files. Those CSV files also contain out-of-scope fields but with duplicates + empty rows.
+        |--- users                           Contains the details about each user.
+        |--- *.json                          Contains the JSON files that are merged from the folder "repo_demographic_mined_data".
+	|--- repo_demographic_mined_data         Contains the demographic repositories data utilized for the quantitative analysis, not merged, as JSON files.
+        |--- more_data                       Contains data that was additionally mined.
+             |--- commit_count               Contains the commit count as JSON files for each repository.
+             |--- contributor_count          Contains the contributors count as JSON files for each repository.
+             |--- in_depth_details           Contains the in-depth details as JSON files for each repository.
+             |--- issue_count                Contains the issues count as JSON files for each repository.
+             |--- pr_count                   Contains the pull requests count as JSON files for each repository.
+        |--- *.json                          The JSON files that represent the topics utilized across repositories.
+	|--- mine_repo_data.py                   The Python script responsible for mining the repositories demographic data through Git REST API.analysis of the contents of the repositories

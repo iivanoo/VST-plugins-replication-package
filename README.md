@@ -3,20 +3,11 @@ VST Plugins – Replication package
 Overview of the replication package
 This replication package is structured as follows:
 
-    |--- Qualitative analysis/          The data extracted during the qualitative analysis.
-    |--- Quantitative analysis/         The scripts utilized and the data extracted during the quantitative analysis.
+    |--- Quantitative analysis/         The scripts utilized and the data extracted during the analysis.
     |--- Repositories data/   	    The scripts utilized and the data extracted during the mining process of VST Plugins repositories on GitHub.
 
     
 Each of the folders listed above are described in details in the remaining of this readme.
-
-Qualitative analysis
-
-    |--- CSVs Used         Two CSV files: the first one represents the content of issues, and the second one represents the developed themes and codes for qualitative analysis.   
-    |--- Figures           The figure that depicts as a radar plot the distribution of themes and codes among repositories issues.
-    |--- Codes.docx        The document that was utilized for categorizing the issues' contents by codes.
-    |--- Themes.docx       The document that was utilized for grouping the codes by themes.    
-
 
 Quantitative analysis
 

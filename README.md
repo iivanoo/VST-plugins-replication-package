@@ -1,6 +1,6 @@
-VST Plugins – Replication package
+# VST Plugins – Replication package
 
-Overview of the replication package
+## Overview of the replication package
 This replication package is structured as follows:
 
     |--- Quantitative analysis/         The scripts utilized and the data extracted during the analysis.
@@ -9,7 +9,7 @@ This replication package is structured as follows:
     
 Each of the folders listed above are described in details in the remaining of this readme.
 
-Quantitative analysis
+## Quantitative analysis
 
     |--- CSVs Used                                     Contains the CSVs files utilized for quantitative analysis.   
     |--- Figures                                       Contains the figures outputted from the "quantitative_analysis_script.py" Python script.
@@ -20,7 +20,7 @@ Quantitative analysis
     |--- rq3.ipynb                                     The Jupyter Notebook in Python utilized for generating the plots and the descriptive statistics that are required for answering RQ3.
 
 
-Repositories data
+## Repositories data
   
 	|--- Cloned repositories                  	Contains the SonarQube reports alongside the Python script responsible for cloning the repositories mentioned in the CSVs Used subfolder. 
         |--- CSVs Used                       	Contains the final repositories dataset as a CSV file, which was utilized only for the sole purpose of gathering the repositories' names by the "mine_repo_data.py" Python script.
